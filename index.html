@@ -1,0 +1,3127 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+  <title>Chúc Mừng Ngày Phụ Nữ Việt Nam 20/10 🌷</title>
+  <meta name="description" content="Món quà tinh thần lung linh, ý nghĩa và ngọt ngào dành tặng những người bạn gái tuyệt vời nhân ngày 20/10.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Nunito:ital,wght@0,400;0,600;0,700;0,800;1,400&family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* ==========================================================================
+       CSS VARIABLES & THEME SETUP
+       ========================================================================== */
+    :root {
+      --font-main: 'Quicksand', 'Nunito', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      --font-serif: 'Playfair Display', Georgia, 'Times New Roman', serif;
+      --font-hand: 'Dancing Script', cursive, sans-serif;
+
+      --pink-soft: #ffe4e9;
+      --pink-pastel: #ffb8c6;
+      --pink-rose: #ff7597;
+      --pink-deep: #e84370;
+      
+      --purple-light: #f1e4ff;
+      --purple-lavender: #d6b8ff;
+      --purple-deep: #8b5cf6;
+
+      --mint-soft: #e6faf2;
+      --mint-pastel: #a7f3d0;
+      --mint-vibrant: #10b981;
+
+      --champagne-gold: #fde047;
+      --champagne-deep: #eab308;
+      --cream-white: #fffdf9;
+      --text-dark: #372549;
+      --text-muted: #6b5770;
+
+      --glass-bg: rgba(255, 255, 255, 0.72);
+      --glass-border: rgba(255, 255, 255, 0.85);
+      --glass-shadow: 0 12px 36px -8px rgba(186, 104, 200, 0.18), 0 4px 16px rgba(0, 0, 0, 0.04);
+      --glass-glow: 0 0 25px rgba(255, 117, 151, 0.35);
+
+      --radius-sm: 14px;
+      --radius-md: 22px;
+      --radius-lg: 32px;
+      --radius-full: 9999px;
+
+      --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      --transition-bounce: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    /* Reset & Base */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      font-family: var(--font-main);
+      color: var(--text-dark);
+      background: linear-gradient(135deg, #fff5f8 0%, #f7efff 50%, #effaf6 100%);
+      min-height: 100vh;
+      overflow-x: hidden;
+      position: relative;
+      line-height: 1.65;
+    }
+
+    /* Ambient Canvas */
+    #ambient-canvas, #fireworks-canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    #fireworks-canvas {
+      z-index: 998;
+      display: none;
+    }
+
+    /* Mouse Ripple */
+    .click-sparkle {
+      position: fixed;
+      pointer-events: none;
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      animation: sparklePop 0.8s ease-out forwards;
+      z-index: 9999;
+    }
+
+    @keyframes sparklePop {
+      0% {
+        width: 6px;
+        height: 6px;
+        opacity: 1;
+        box-shadow: 0 0 10px 4px rgba(255, 117, 151, 0.8),
+                    0 0 20px 8px rgba(214, 184, 255, 0.6);
+      }
+      100% {
+        width: 60px;
+        height: 60px;
+        opacity: 0;
+        box-shadow: 0 0 30px 15px rgba(255, 117, 151, 0),
+                    0 0 45px 25px rgba(214, 184, 255, 0);
+      }
+    }
+
+    /* ==========================================================================
+       TOP FLOATING CONTROLS DOCK
+       ========================================================================== */
+    .top-dock {
+      position: fixed;
+      top: 16px;
+      right: 18px;
+      display: flex;
+      gap: 10px;
+      z-index: 100;
+      background: rgba(255, 255, 255, 0.78);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border: 1px solid var(--glass-border);
+      border-radius: var(--radius-full);
+      padding: 6px 10px;
+      box-shadow: 0 8px 24px rgba(186, 104, 200, 0.15);
+      transition: var(--transition-smooth);
+    }
+
+    .top-dock:hover {
+      box-shadow: 0 10px 30px rgba(255, 117, 151, 0.25);
+    }
+
+    .dock-btn {
+      background: none;
+      border: none;
+      font-size: 1.15rem;
+      cursor: pointer;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: var(--transition-bounce);
+      color: var(--text-dark);
+      position: relative;
+    }
+
+    .dock-btn:hover {
+      background: rgba(255, 117, 151, 0.15);
+      transform: scale(1.15);
+    }
+
+    .dock-btn:active {
+      transform: scale(0.92);
+    }
+
+    .dock-btn.active {
+      color: var(--pink-rose);
+      background: rgba(255, 117, 151, 0.2);
+    }
+
+    .dock-btn .tooltip {
+      position: absolute;
+      bottom: -32px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(55, 37, 73, 0.9);
+      color: #fff;
+      font-size: 0.72rem;
+      padding: 3px 8px;
+      border-radius: 6px;
+      white-space: nowrap;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.2s ease;
+      font-family: var(--font-main);
+    }
+
+    .dock-btn:hover .tooltip {
+      opacity: 1;
+    }
+
+    /* Sound indicator bars */
+    .sound-bars {
+      display: inline-flex;
+      align-items: flex-end;
+      gap: 2px;
+      height: 14px;
+      width: 14px;
+    }
+    .sound-bar {
+      width: 3px;
+      background: currentColor;
+      border-radius: 2px;
+      height: 4px;
+      transition: height 0.2s;
+    }
+    .sound-bars.playing .sound-bar:nth-child(1) { animation: soundWave 0.7s infinite alternate ease-in-out; }
+    .sound-bars.playing .sound-bar:nth-child(2) { animation: soundWave 0.9s 0.2s infinite alternate ease-in-out; }
+    .sound-bars.playing .sound-bar:nth-child(3) { animation: soundWave 0.6s 0.4s infinite alternate ease-in-out; }
+
+    @keyframes soundWave {
+      0% { height: 3px; }
+      100% { height: 14px; }
+    }
+
+    /* ==========================================================================
+       SECTION 1: OPENING SCREEN - SECRET GIFT BOX (#intro-screen)
+       ========================================================================== */
+    #intro-screen {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: radial-gradient(circle at 50% 40%, #ffdde5 0%, #eed6ff 45%, #c8b6ff 80%, #9f86c0 100%);
+      z-index: 500;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      transition: opacity 1.2s cubic-bezier(0.77, 0, 0.175, 1), transform 1.2s cubic-bezier(0.77, 0, 0.175, 1);
+      overflow: hidden;
+    }
+
+    #intro-screen.unlocked {
+      opacity: 0;
+      transform: scale(1.15) translateY(-50px);
+      pointer-events: none;
+    }
+
+    .intro-decorations {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+    }
+
+    .intro-star, .intro-bubble {
+      position: absolute;
+      border-radius: 50%;
+      opacity: 0.7;
+      animation: floatUp 8s infinite linear;
+    }
+
+    @keyframes floatUp {
+      0% {
+        transform: translateY(105vh) scale(0.6) rotate(0deg);
+        opacity: 0;
+      }
+      20% { opacity: 0.8; }
+      80% { opacity: 0.8; }
+      100% {
+        transform: translateY(-10vh) scale(1.2) rotate(360deg);
+        opacity: 0;
+      }
+    }
+
+    .intro-content {
+      position: relative;
+      z-index: 10;
+      text-align: center;
+      padding: 20px;
+      max-width: 600px;
+    }
+
+    .intro-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 20px;
+      background: rgba(255, 255, 255, 0.65);
+      border: 1px solid rgba(255, 255, 255, 0.9);
+      border-radius: var(--radius-full);
+      box-shadow: 0 8px 20px rgba(186, 104, 200, 0.15);
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--pink-deep);
+      margin-bottom: 24px;
+      backdrop-filter: blur(8px);
+      animation: pulseSoft 2.5s infinite ease-in-out;
+    }
+
+    @keyframes pulseSoft {
+      0%, 100% { transform: scale(1); box-shadow: 0 8px 20px rgba(186, 104, 200, 0.15); }
+      50% { transform: scale(1.04); box-shadow: 0 12px 28px rgba(255, 117, 151, 0.3); }
+    }
+
+    .intro-title {
+      font-family: var(--font-hand);
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      color: #3f205c;
+      text-shadow: 0 3px 12px rgba(255, 255, 255, 0.8);
+      margin-bottom: 12px;
+      line-height: 1.25;
+    }
+
+    .intro-subtitle {
+      font-size: clamp(1rem, 2.8vw, 1.25rem);
+      color: #5d4272;
+      font-weight: 600;
+      margin-bottom: 35px;
+      text-shadow: 0 1px 4px rgba(255, 255, 255, 0.6);
+    }
+
+    /* 3D GIFT BOX */
+    .gift-box-wrapper {
+      position: relative;
+      width: 170px;
+      height: 170px;
+      margin: 0 auto 36px;
+      perspective: 800px;
+      cursor: pointer;
+    }
+
+    .gift-box-3d {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      transform-style: preserve-3d;
+      transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+      animation: boxHover 3.5s infinite ease-in-out;
+    }
+
+    @keyframes boxHover {
+      0%, 100% { transform: translateY(0) rotateY(-8deg) rotateX(8deg); }
+      50% { transform: translateY(-14px) rotateY(10deg) rotateX(4deg); }
+    }
+
+    .gift-box-3d.shaking {
+      animation: boxShaking 0.6s ease-in-out infinite alternate !important;
+    }
+
+    @keyframes boxShaking {
+      0% { transform: scale(1.02) rotate(-3deg); }
+      25% { transform: scale(1.08) rotate(4deg); }
+      50% { transform: scale(1.04) rotate(-4deg); }
+      75% { transform: scale(1.1) rotate(3deg); }
+      100% { transform: scale(1.12) rotate(-2deg); }
+    }
+
+    /* Box Body */
+    .box-body {
+      position: absolute;
+      width: 140px;
+      height: 110px;
+      bottom: 0;
+      left: 15px;
+      background: linear-gradient(135deg, #ff7597, #ff537b);
+      border-radius: 14px;
+      box-shadow: 0 18px 45px rgba(232, 67, 112, 0.4), inset 0 2px 6px rgba(255, 255, 255, 0.4);
+    }
+
+    .box-body::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 28px;
+      height: 100%;
+      background: linear-gradient(180deg, #ffe082, #f59e0b);
+      box-shadow: 0 0 10px rgba(245, 158, 11, 0.3);
+    }
+
+    .box-body::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      width: 100%;
+      height: 28px;
+      background: linear-gradient(90deg, #ffe082, #f59e0b);
+      box-shadow: 0 0 10px rgba(245, 158, 11, 0.3);
+    }
+
+    /* Box Lid */
+    .box-lid {
+      position: absolute;
+      width: 156px;
+      height: 38px;
+      top: 28px;
+      left: 7px;
+      background: linear-gradient(135deg, #ff8fa7, #ff6b8b);
+      border-radius: 12px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15), inset 0 2px 5px rgba(255, 255, 255, 0.6);
+      transform-origin: top center;
+      transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.5s ease;
+      z-index: 5;
+    }
+
+    .box-lid::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 32px;
+      height: 100%;
+      background: linear-gradient(180deg, #fff3b0, #fbbf24);
+    }
+
+    /* Bow on Lid */
+    .box-bow {
+      position: absolute;
+      top: -24px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 70px;
+      height: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 6;
+      transition: transform 0.6s ease;
+    }
+
+    .bow-left, .bow-right {
+      width: 32px;
+      height: 26px;
+      background: linear-gradient(135deg, #fde047, #f59e0b);
+      border-radius: 50% 50% 20% 50%;
+      box-shadow: 0 4px 10px rgba(245, 158, 11, 0.4);
+    }
+
+    .bow-left { transform: rotate(-25deg); }
+    .bow-right {
+      transform: rotate(25deg) scaleX(-1);
+    }
+
+    .bow-knot {
+      position: absolute;
+      width: 18px;
+      height: 18px;
+      background: linear-gradient(135deg, #fffbeb, #d97706);
+      border-radius: 50%;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+
+    /* Opened States */
+    .gift-box-3d.opened .box-lid {
+      transform: translateY(-90px) rotate(-35deg) scale(0.9);
+      opacity: 0.1;
+    }
+
+    .gift-box-3d.opened .box-bow {
+      transform: translateX(-50%) translateY(-120px) scale(0.2);
+      opacity: 0;
+    }
+
+    /* Light Beam from Inside Box */
+    .box-beam {
+      position: absolute;
+      bottom: 60px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 180px;
+      height: 0;
+      background: radial-gradient(ellipse at bottom, rgba(255, 255, 255, 0.95) 0%, rgba(254, 240, 138, 0.8) 35%, rgba(255, 117, 151, 0) 75%);
+      opacity: 0;
+      pointer-events: none;
+      filter: blur(8px);
+      transition: height 0.8s ease-out, opacity 0.6s ease;
+      z-index: 2;
+    }
+
+    .gift-box-3d.opened .box-beam {
+      height: 450px;
+      opacity: 1;
+      animation: beamPulse 1.8s infinite alternate ease-in-out;
+    }
+
+    @keyframes beamPulse {
+      0% { transform: translateX(-50%) scaleX(1); opacity: 0.85; }
+      100% { transform: translateX(-50%) scaleX(1.4); opacity: 1; }
+    }
+
+    /* Open Button */
+    .btn-open-gift {
+      background: linear-gradient(135deg, #ff6584 0%, #e84370 50%, #9038ec 100%);
+      color: #fff;
+      font-family: var(--font-main);
+      font-size: 1.2rem;
+      font-weight: 700;
+      padding: 16px 42px;
+      border: none;
+      border-radius: var(--radius-full);
+      cursor: pointer;
+      box-shadow: 0 10px 30px rgba(232, 67, 112, 0.45), 0 0 0 4px rgba(255, 255, 255, 0.5);
+      transition: var(--transition-bounce);
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn-open-gift::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(45deg, transparent 40%, rgba(255, 255, 255, 0.5) 50%, transparent 60%);
+      transform: rotate(35deg) translateX(-100%);
+      transition: transform 0.8s;
+    }
+
+    .btn-open-gift:hover {
+      transform: translateY(-4px) scale(1.05);
+      box-shadow: 0 16px 40px rgba(232, 67, 112, 0.6), 0 0 0 6px rgba(255, 255, 255, 0.8);
+    }
+
+    .btn-open-gift:hover::before {
+      transform: rotate(35deg) translateX(100%);
+    }
+
+    .btn-open-gift:active {
+      transform: scale(0.96);
+    }
+
+    /* Floating Opening Message Lines */
+    .intro-reveal-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 90%;
+      max-width: 550px;
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 0.8s ease;
+      z-index: 20;
+    }
+
+    .intro-reveal-text.show {
+      opacity: 1;
+    }
+
+    .reveal-line {
+      font-family: var(--font-serif);
+      font-size: clamp(1.4rem, 4vw, 2.2rem);
+      font-weight: 700;
+      color: #3b1154;
+      text-shadow: 0 4px 18px rgba(255, 255, 255, 0.95);
+      margin: 12px 0;
+      opacity: 0;
+      transform: translateY(25px);
+      transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .reveal-line.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ==========================================================================
+       MAIN CONTAINER & GARDEN
+       ========================================================================== */
+    #garden-container {
+      position: relative;
+      z-index: 10;
+      opacity: 0;
+      transition: opacity 1s ease;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    #garden-container.loaded {
+      opacity: 1;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .section-spacing {
+      padding: 90px 0;
+      position: relative;
+    }
+
+    @media (max-width: 768px) {
+      .section-spacing {
+        padding: 60px 0;
+      }
+    }
+
+    /* Section Headers */
+    .section-header {
+      text-align: center;
+      margin-bottom: 50px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .section-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255, 117, 151, 0.12);
+      border: 1px solid rgba(255, 117, 151, 0.3);
+      color: var(--pink-deep);
+      padding: 6px 16px;
+      border-radius: var(--radius-full);
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 12px;
+    }
+
+    .section-title {
+      font-family: var(--font-serif);
+      font-size: clamp(1.8rem, 4.5vw, 2.8rem);
+      color: #2e1a3b;
+      margin-bottom: 14px;
+      position: relative;
+      display: inline-block;
+    }
+
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: -8px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 70px;
+      height: 4px;
+      background: linear-gradient(90deg, var(--pink-rose), var(--purple-lavender));
+      border-radius: 4px;
+    }
+
+    .section-desc {
+      color: var(--text-muted);
+      font-size: clamp(0.95rem, 2.5vw, 1.12rem);
+      max-width: 620px;
+      margin: 18px auto 0;
+    }
+
+    /* ==========================================================================
+       SECTION 3: HERO SECTION — KHU VƯỜN HOA 20/10
+       ========================================================================== */
+    .hero-section {
+      min-height: 90vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding-top: 100px;
+      position: relative;
+    }
+
+    .hero-card {
+      background: var(--glass-bg);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid var(--glass-border);
+      border-radius: var(--radius-lg);
+      padding: clamp(35px, 6vw, 65px) clamp(20px, 5vw, 55px);
+      box-shadow: var(--glass-shadow);
+      position: relative;
+      max-width: 880px;
+      margin: 0 auto;
+      z-index: 2;
+    }
+
+    .hero-card::before {
+      content: '';
+      position: absolute;
+      top: -3px;
+      left: -3px;
+      right: -3px;
+      bottom: -3px;
+      background: linear-gradient(135deg, rgba(255, 117, 151, 0.4), rgba(214, 184, 255, 0.4), rgba(167, 243, 208, 0.3));
+      border-radius: calc(var(--radius-lg) + 3px);
+      z-index: -1;
+      opacity: 0.6;
+    }
+
+    .hero-sub {
+      font-size: clamp(1rem, 2.5vw, 1.35rem);
+      font-weight: 700;
+      color: var(--pink-rose);
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      margin-bottom: 14px;
+      display: inline-block;
+      animation: fadeInDown 1s ease;
+    }
+
+    .hero-heading {
+      font-family: var(--font-serif);
+      font-size: clamp(2.2rem, 6.5vw, 4.2rem);
+      line-height: 1.18;
+      margin-bottom: 20px;
+      background: linear-gradient(135deg, #e84370 0%, #9038ec 50%, #f59e0b 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: glowTitle 3s infinite alternate ease-in-out;
+    }
+
+    @keyframes glowTitle {
+      0% { filter: drop-shadow(0 4px 10px rgba(232, 67, 112, 0.2)); }
+      100% { filter: drop-shadow(0 6px 18px rgba(144, 56, 236, 0.35)); }
+    }
+
+    .hero-message {
+      font-size: clamp(1.05rem, 2.8vw, 1.3rem);
+      color: #4a3455;
+      line-height: 1.8;
+      max-width: 720px;
+      margin: 0 auto 35px;
+      font-weight: 500;
+    }
+
+    .hero-badge-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 15px;
+    }
+
+    .hero-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 255, 255, 0.85);
+      border: 1px solid rgba(255, 117, 151, 0.25);
+      padding: 8px 18px;
+      border-radius: var(--radius-full);
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #553366;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+      cursor: pointer;
+      transition: var(--transition-bounce);
+    }
+
+    .hero-pill:hover {
+      transform: translateY(-3px) scale(1.04);
+      background: #fff;
+      border-color: var(--pink-rose);
+      color: var(--pink-deep);
+      box-shadow: 0 8px 20px rgba(255, 117, 151, 0.2);
+    }
+
+    /* Garden Floral Floating Accents */
+    .flower-accent {
+      position: absolute;
+      pointer-events: auto;
+      cursor: pointer;
+      transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+      z-index: 3;
+    }
+
+    .flower-accent:hover {
+      transform: scale(1.3) rotate(15deg);
+    }
+
+    .flower-accent:active {
+      transform: scale(0.9);
+    }
+
+    /* ==========================================================================
+       SECTION 4: WISH CARDS (6 FLIP CARDS)
+       ========================================================================== */
+    .wish-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 28px;
+      perspective: 1200px;
+    }
+
+    @media (max-width: 480px) {
+      .wish-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+    }
+
+    .wish-card-container {
+      height: 290px;
+      perspective: 1000px;
+      cursor: pointer;
+    }
+
+    .wish-card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      transition: transform 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+      transform-style: preserve-3d;
+      border-radius: var(--radius-md);
+    }
+
+    .wish-card-container.flipped .wish-card-inner {
+      transform: rotateY(180deg);
+    }
+
+    .wish-card-front, .wish-card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      border-radius: var(--radius-md);
+      padding: 30px 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: var(--glass-bg);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid var(--glass-border);
+      box-shadow: var(--glass-shadow);
+      transition: box-shadow 0.4s ease, border-color 0.4s ease;
+    }
+
+    .wish-card-container:hover .wish-card-front {
+      box-shadow: 0 16px 40px rgba(255, 117, 151, 0.25);
+      border-color: rgba(255, 117, 151, 0.5);
+    }
+
+    .wish-card-back {
+      transform: rotateY(180deg);
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(255, 240, 246, 0.9));
+      border: 1px solid rgba(255, 117, 151, 0.4);
+    }
+
+    .card-icon-wrap {
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.2rem;
+      margin-bottom: 18px;
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(255, 228, 233, 0.6));
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+      transition: transform 0.4s ease;
+    }
+
+    .wish-card-container:hover .card-icon-wrap {
+      transform: scale(1.15) rotate(8deg);
+    }
+
+    .card-front-title {
+      font-family: var(--font-serif);
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: #372549;
+      margin-bottom: 10px;
+    }
+
+    .card-front-hint {
+      font-size: 0.85rem;
+      color: var(--pink-deep);
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 12px;
+      background: rgba(255, 117, 151, 0.1);
+      border-radius: var(--radius-full);
+      margin-top: 10px;
+    }
+
+    .card-back-title {
+      font-family: var(--font-serif);
+      font-size: 1.18rem;
+      font-weight: 700;
+      color: var(--pink-deep);
+      margin-bottom: 12px;
+    }
+
+    .card-back-text {
+      font-size: 1.02rem;
+      color: #4a3455;
+      line-height: 1.7;
+      font-weight: 500;
+    }
+
+    .card-back-flourish {
+      margin-top: 14px;
+      font-size: 1.2rem;
+      color: var(--pink-rose);
+      opacity: 0.8;
+    }
+
+    /* Individual Card Color Themes */
+    .card-theme-1 .card-icon-wrap { background: linear-gradient(135deg, #ffe4e9, #ffccd5); color: #ff5277; }
+    .card-theme-2 .card-icon-wrap { background: linear-gradient(135deg, #e6faf2, #a7f3d0); color: #059669; }
+    .card-theme-3 .card-icon-wrap { background: linear-gradient(135deg, #fef3c7, #fde68a); color: #d97706; }
+    .card-theme-4 .card-icon-wrap { background: linear-gradient(135deg, #ffe4e6, #fbcfe8); color: #db2777; }
+    .card-theme-5 .card-icon-wrap { background: linear-gradient(135deg, #ede9fe, #ddd6fe); color: #7c3aed; }
+    .card-theme-6 .card-icon-wrap { background: linear-gradient(135deg, #e0f2fe, #bae6fd); color: #0284c7; }
+
+    /* ==========================================================================
+       SECTION 5: MINI GAME — CHIẾC HỘP MAY MẮN 20/10
+       ========================================================================== */
+    .game-section {
+      background: radial-gradient(circle at 50% 50%, rgba(255, 235, 245, 0.7) 0%, rgba(240, 230, 255, 0.4) 60%, transparent 100%);
+      border-radius: var(--radius-lg);
+      padding: 60px 24px;
+      margin: 40px auto;
+    }
+
+    .mystery-boxes-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+      gap: 24px;
+      max-width: 900px;
+      margin: 0 auto 35px;
+    }
+
+    @media (max-width: 600px) {
+      .mystery-boxes-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 14px;
+      }
+    }
+
+    .mystery-box-item {
+      background: var(--glass-bg);
+      border: 2px dashed rgba(255, 117, 151, 0.4);
+      border-radius: var(--radius-md);
+      padding: 24px 12px;
+      text-align: center;
+      cursor: pointer;
+      transition: var(--transition-bounce);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .mystery-box-item:hover {
+      transform: translateY(-8px) scale(1.05);
+      border-color: var(--pink-rose);
+      box-shadow: 0 12px 28px rgba(255, 117, 151, 0.3);
+      background: #fff;
+    }
+
+    .mystery-box-item.selected {
+      border: 2px solid var(--pink-deep);
+      background: linear-gradient(135deg, #fff0f5, #ffe4ec);
+      box-shadow: 0 0 25px rgba(255, 117, 151, 0.5);
+    }
+
+    .box-item-icon {
+      font-size: 2.8rem;
+      margin-bottom: 8px;
+      display: inline-block;
+      transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    .mystery-box-item:hover .box-item-icon {
+      transform: rotate(12deg) scale(1.15);
+    }
+
+    .box-item-label {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: #5d4272;
+    }
+
+    /* Modal / Pop-up Card for Revealed Wish */
+    .wish-reveal-modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(46, 26, 59, 0.6);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      z-index: 2000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.4s ease;
+    }
+
+    .wish-reveal-modal.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .wish-modal-card {
+      background: var(--cream-white);
+      border: 2px solid #ffd4e0;
+      border-radius: var(--radius-lg);
+      padding: clamp(30px, 5vw, 50px) clamp(20px, 4vw, 40px);
+      max-width: 520px;
+      width: 100%;
+      text-align: center;
+      position: relative;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.25), 0 0 40px rgba(255, 117, 151, 0.4);
+      transform: scale(0.7) rotate(-5deg);
+      transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    .wish-reveal-modal.active .wish-modal-card {
+      transform: scale(1) rotate(0deg);
+    }
+
+    .modal-close-btn {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      background: rgba(0, 0, 0, 0.05);
+      border: none;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      font-size: 1.2rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: var(--transition-bounce);
+      color: #666;
+    }
+
+    .modal-close-btn:hover {
+      background: var(--pink-soft);
+      color: var(--pink-deep);
+      transform: scale(1.15);
+    }
+
+    .modal-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 16px;
+      background: #ffe4e9;
+      color: var(--pink-deep);
+      font-weight: 700;
+      font-size: 0.85rem;
+      border-radius: var(--radius-full);
+      margin-bottom: 18px;
+    }
+
+    .modal-wish-text {
+      font-family: var(--font-serif);
+      font-size: clamp(1.2rem, 3.2vw, 1.6rem);
+      color: #2e1a3b;
+      line-height: 1.6;
+      margin: 18px 0 28px;
+      font-weight: 600;
+    }
+
+    .modal-btn-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+    }
+
+    .btn-secondary {
+      background: rgba(255, 117, 151, 0.15);
+      color: var(--pink-deep);
+      border: 1px solid rgba(255, 117, 151, 0.3);
+      padding: 12px 24px;
+      border-radius: var(--radius-full);
+      font-weight: 700;
+      cursor: pointer;
+      font-family: var(--font-main);
+      transition: var(--transition-bounce);
+    }
+
+    .btn-secondary:hover {
+      background: var(--pink-deep);
+      color: #fff;
+      transform: translateY(-2px);
+    }
+
+    /* ==========================================================================
+       SECTION 6: CÂY HOA ĐIỀU ƯỚC 🌟 (WISH TREE)
+       ========================================================================== */
+    .wish-tree-wrap {
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.85), rgba(246, 237, 255, 0.85));
+      border: 1px solid var(--glass-border);
+      border-radius: var(--radius-lg);
+      padding: clamp(35px, 6vw, 60px) clamp(20px, 4vw, 40px);
+      box-shadow: var(--glass-shadow);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .tree-stage {
+      position: relative;
+      width: 100%;
+      max-width: 420px;
+      height: 320px;
+      margin: 0 auto 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .tree-svg {
+      width: 100%;
+      height: 100%;
+      filter: drop-shadow(0 10px 20px rgba(186, 104, 200, 0.25));
+    }
+
+    .tree-blossom {
+      transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+      transform-origin: center;
+    }
+
+    .tree-blossom.active {
+      filter: drop-shadow(0 0 12px #ff6584) brightness(1.3);
+      transform: scale(1.35);
+      animation: blossomGlow 1.5s infinite alternate ease-in-out;
+    }
+
+    @keyframes blossomGlow {
+      0% { filter: drop-shadow(0 0 8px #ff6584); }
+      100% { filter: drop-shadow(0 0 20px #f43f5e) brightness(1.5); }
+    }
+
+    .tree-heart-particles {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 220px;
+      height: 220px;
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 1s ease;
+    }
+
+    .tree-heart-particles.active {
+      opacity: 1;
+      animation: heartPulse 1.8s infinite ease-in-out;
+    }
+
+    @keyframes heartPulse {
+      0%, 100% { transform: translate(-50%, -50%) scale(1); filter: drop-shadow(0 0 15px rgba(255, 105, 180, 0.6)); }
+      50% { transform: translate(-50%, -50%) scale(1.12); filter: drop-shadow(0 0 30px rgba(255, 105, 180, 0.9)); }
+    }
+
+    .wish-tree-output {
+      min-height: 180px;
+      max-width: 650px;
+      margin: 0 auto 25px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      text-align: center;
+    }
+
+    .tree-line-text {
+      font-family: var(--font-serif);
+      font-size: clamp(1.05rem, 2.5vw, 1.25rem);
+      color: #3f205c;
+      font-weight: 600;
+      line-height: 1.6;
+      opacity: 0;
+      transform: translateY(16px);
+      transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .tree-line-text.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .tree-line-final {
+      font-family: var(--font-hand);
+      font-size: clamp(1.5rem, 3.8vw, 2.1rem);
+      color: var(--pink-deep);
+      font-weight: 700;
+      margin-top: 10px;
+      opacity: 0;
+      transform: scale(0.9);
+      transition: all 0.8s ease;
+    }
+
+    .tree-line-final.visible {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    /* ==========================================================================
+       SECTION 7: GÓC LƯU GIỮ KỶ NIỆM (POLAROID SCRAPBOOK)
+       ========================================================================== */
+    .scrapbook-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 32px;
+      padding: 20px 0;
+    }
+
+    .polaroid-card {
+      background: #fff;
+      padding: 16px 16px 28px 16px;
+      border-radius: 6px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08), 0 2px 6px rgba(0, 0, 0, 0.04);
+      transition: var(--transition-bounce);
+      position: relative;
+      cursor: pointer;
+    }
+
+    .polaroid-card:nth-child(1) { transform: rotate(-2.5deg); }
+    .polaroid-card:nth-child(2) { transform: rotate(3deg); }
+    .polaroid-card:nth-child(3) { transform: rotate(-3deg); }
+    .polaroid-card:nth-child(4) { transform: rotate(2deg); }
+
+    .polaroid-card:hover {
+      transform: translateY(-12px) rotate(0deg) scale(1.04);
+      box-shadow: 0 20px 45px rgba(255, 117, 151, 0.28);
+      z-index: 10;
+    }
+
+    /* Washi tape decor */
+    .washi-tape {
+      position: absolute;
+      top: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100px;
+      height: 26px;
+      background: rgba(255, 214, 224, 0.85);
+      border-left: 2px dashed rgba(255, 255, 255, 0.7);
+      border-right: 2px dashed rgba(255, 255, 255, 0.7);
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+    }
+
+    .polaroid-card:nth-child(2) .washi-tape { background: rgba(214, 184, 255, 0.8); }
+    .polaroid-card:nth-child(3) .washi-tape { background: rgba(167, 243, 208, 0.8); }
+    .polaroid-card:nth-child(4) .washi-tape { background: rgba(254, 240, 138, 0.8); }
+
+    .polaroid-photo {
+      width: 100%;
+      height: 220px;
+      border-radius: 4px;
+      overflow: hidden;
+      background: linear-gradient(135deg, #fff0f5, #f3e8ff);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .polaroid-caption {
+      margin-top: 18px;
+      text-align: center;
+      font-family: var(--font-hand);
+      font-size: 1.45rem;
+      font-weight: 700;
+      color: #4a2c5a;
+      line-height: 1.35;
+    }
+
+    .polaroid-sticker {
+      position: absolute;
+      bottom: 8px;
+      right: 12px;
+      font-size: 1.5rem;
+      transition: transform 0.3s ease;
+    }
+
+    .polaroid-card:hover .polaroid-sticker {
+      transform: scale(1.3) rotate(15deg);
+    }
+
+    /* Sophia Rose Photo & Modal Showcase Styles */
+    .polaroid-sophia {
+      border: 2px solid rgba(255, 117, 151, 0.4);
+    }
+
+    .polaroid-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 25%;
+      border-radius: 4px;
+      transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    .polaroid-card:hover .polaroid-img {
+      transform: scale(1.08);
+    }
+
+    .photo-overlay-badge {
+      position: absolute;
+      bottom: 8px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: linear-gradient(135deg, rgba(232, 67, 112, 0.92), rgba(255, 117, 151, 0.92));
+      color: #fff;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: var(--radius-full);
+      box-shadow: 0 4px 12px rgba(232, 67, 112, 0.35);
+      pointer-events: none;
+      backdrop-filter: blur(4px);
+      white-space: nowrap;
+      transition: transform 0.3s ease;
+    }
+
+    .polaroid-card:hover .photo-overlay-badge {
+      transform: translateX(-50%) scale(1.06);
+    }
+
+    .polaroid-subcaption {
+      text-align: center;
+      font-size: 0.85rem;
+      color: #7a5c88;
+      font-weight: 600;
+      margin-top: 4px;
+    }
+
+    .sophia-modal-card {
+      max-width: 520px;
+      background: linear-gradient(135deg, #fffdfb, #fff0f5);
+      border: 2px solid #ffccd5;
+    }
+
+    .sophia-img-container {
+      position: relative;
+      width: 220px;
+      height: 220px;
+      margin: 12px auto 18px;
+      border-radius: 50%;
+      padding: 6px;
+      background: linear-gradient(135deg, #ff7597, #fde047, #a78bfa);
+      box-shadow: 0 12px 35px rgba(232, 67, 112, 0.35);
+    }
+
+    .sophia-modal-img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center 25%;
+      border: 3px solid #fff;
+      transition: transform 0.6s ease;
+    }
+
+    .sophia-img-container:hover .sophia-modal-img {
+      transform: scale(1.05) rotate(3deg);
+    }
+
+    .sophia-modal-title {
+      font-family: var(--font-serif);
+      font-size: clamp(1.35rem, 3.6vw, 1.7rem);
+      color: #2e1a3b;
+      margin-bottom: 4px;
+    }
+
+    .sophia-modal-sub {
+      font-size: 0.95rem;
+      color: var(--pink-deep);
+      font-weight: 700;
+    }
+
+    /* ==========================================================================
+       SECTION 8: LÁ THƯ CHÚC MỪNG 20/10 (GREETING LETTER)
+       ========================================================================== */
+    .letter-wrapper {
+      max-width: 820px;
+      margin: 0 auto;
+      background: #fffef9;
+      border: 2px solid #f6d8ae;
+      border-radius: var(--radius-lg);
+      padding: clamp(35px, 6vw, 65px) clamp(24px, 5vw, 60px);
+      box-shadow: 0 20px 50px rgba(186, 104, 200, 0.16), inset 0 0 80px rgba(254, 243, 199, 0.3);
+      position: relative;
+    }
+
+    /* Gold corner flourishes */
+    .letter-corner {
+      position: absolute;
+      width: 48px;
+      height: 48px;
+      border: 3px solid #d4af37;
+      pointer-events: none;
+      opacity: 0.65;
+    }
+    .letter-corner.top-left { top: 16px; left: 16px; border-right: none; border-bottom: none; border-radius: 10px 0 0 0; }
+    .letter-corner.top-right { top: 16px; right: 16px; border-left: none; border-bottom: none; border-radius: 0 10px 0 0; }
+    .letter-corner.bottom-left { bottom: 16px; left: 16px; border-right: none; border-top: none; border-radius: 0 0 0 10px; }
+    .letter-corner.bottom-right { bottom: 16px; right: 16px; border-left: none; border-top: none; border-radius: 0 0 10px 0; }
+
+    .letter-header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .letter-stamp {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 60px;
+      height: 60px;
+      border: 2px dashed #e84370;
+      border-radius: 50%;
+      color: #e84370;
+      font-size: 1.8rem;
+      margin-bottom: 14px;
+      box-shadow: 0 4px 12px rgba(232, 67, 112, 0.15);
+    }
+
+    .letter-title {
+      font-family: var(--font-serif);
+      font-size: clamp(1.8rem, 4vw, 2.5rem);
+      color: #372549;
+    }
+
+    .letter-body {
+      font-family: var(--font-main);
+      font-size: clamp(1.02rem, 2.5vw, 1.15rem);
+      line-height: 1.85;
+      color: #42304d;
+      white-space: pre-line;
+      margin-bottom: 30px;
+      min-height: 280px;
+    }
+
+    .letter-typing-cursor {
+      display: inline-block;
+      width: 2px;
+      height: 1.2em;
+      background: var(--pink-rose);
+      vertical-align: middle;
+      margin-left: 2px;
+      animation: blinkCursor 0.8s infinite;
+    }
+
+    @keyframes blinkCursor {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+
+    .letter-footer {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1px dashed #e5d5c5;
+      padding-top: 24px;
+      margin-top: 20px;
+    }
+
+    .letter-controls {
+      display: flex;
+      gap: 12px;
+    }
+
+    .letter-signature {
+      font-family: var(--font-hand);
+      font-size: 1.8rem;
+      color: var(--pink-deep);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .letter-heart-glow {
+      display: inline-block;
+      animation: heartbeat 1.4s infinite ease-in-out;
+    }
+
+    @keyframes heartbeat {
+      0%, 100% { transform: scale(1); filter: drop-shadow(0 0 2px #ff4d6d); }
+      50% { transform: scale(1.3); filter: drop-shadow(0 0 12px #ff4d6d); }
+    }
+
+    /* ==========================================================================
+       SECTION 9: MÀN KẾT THÚC — BỮA TIỆC ÁNH SÁNG 20/10 (FINALE)
+       ========================================================================== */
+    .finale-section {
+      text-align: center;
+      padding: 100px 24px 80px;
+      position: relative;
+    }
+
+    .finale-card {
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(243, 232, 255, 0.85));
+      border: 1px solid var(--glass-border);
+      border-radius: var(--radius-lg);
+      padding: clamp(40px, 6vw, 70px) clamp(20px, 4vw, 50px);
+      max-width: 850px;
+      margin: 0 auto;
+      box-shadow: var(--glass-shadow);
+      position: relative;
+      z-index: 10;
+    }
+
+    .finale-btn-trigger {
+      background: linear-gradient(135deg, #f43f5e 0%, #a855f7 50%, #3b82f6 100%);
+      color: #fff;
+      font-family: var(--font-main);
+      font-size: 1.35rem;
+      font-weight: 800;
+      padding: 18px 46px;
+      border: none;
+      border-radius: var(--radius-full);
+      cursor: pointer;
+      box-shadow: 0 14px 40px rgba(168, 85, 247, 0.45);
+      transition: var(--transition-bounce);
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 25px;
+    }
+
+    .finale-btn-trigger:hover {
+      transform: translateY(-5px) scale(1.06);
+      box-shadow: 0 20px 50px rgba(244, 63, 94, 0.6);
+    }
+
+    .finale-btn-trigger:active {
+      transform: scale(0.96);
+    }
+
+    /* Night sky mode for finale celebration */
+    body.party-mode {
+      background: radial-gradient(circle at 50% 30%, #2b1044 0%, #170729 60%, #0c0217 100%) !important;
+      color: #f3e8ff;
+      transition: background 1.5s ease;
+    }
+
+    body.party-mode .section-title {
+      color: #fff;
+    }
+
+    body.party-mode .hero-card,
+    body.party-mode .wish-card-front,
+    body.party-mode .wish-tree-wrap,
+    body.party-mode .polaroid-card,
+    body.party-mode .letter-wrapper,
+    body.party-mode .finale-card {
+      background: rgba(35, 17, 54, 0.85);
+      border-color: rgba(214, 184, 255, 0.3);
+      color: #f3e8ff;
+    }
+
+    body.party-mode .card-front-title,
+    body.party-mode .modal-wish-text,
+    body.party-mode .tree-line-text,
+    body.party-mode .letter-title,
+    body.party-mode .letter-body {
+      color: #fff;
+    }
+
+    /* Finale Celebration Banner */
+    .party-banner {
+      display: none;
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .party-banner.active {
+      display: block;
+      animation: fadeInUp 1s ease;
+    }
+
+    .party-title-big {
+      font-family: var(--font-serif);
+      font-size: clamp(2.2rem, 7vw, 4.5rem);
+      background: linear-gradient(135deg, #ff7597, #fde047, #a78bfa);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 16px;
+      animation: pulseSoft 2s infinite ease-in-out;
+    }
+
+    .party-sub-big {
+      font-size: clamp(1.1rem, 3vw, 1.45rem);
+      color: #ffd6e0;
+      max-width: 650px;
+      margin: 0 auto 20px;
+      line-height: 1.7;
+    }
+
+    .party-quote-final {
+      font-family: var(--font-hand);
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      color: #fde047;
+      margin: 20px 0 35px;
+    }
+
+    .finale-nav-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 14px;
+      margin-top: 25px;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      border-top: 1px solid rgba(255, 117, 151, 0.15);
+      position: relative;
+      z-index: 10;
+    }
+
+    /* ==========================================================================
+       ANIMATION UTILITIES & REDUCED MOTION
+       ========================================================================== */
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Background Canvas for Particles, Petals, Fireflies -->
+  <canvas id="ambient-canvas"></canvas>
+  <canvas id="fireworks-canvas"></canvas>
+
+  <!-- Top Floating Controls Dock -->
+  <aside class="top-dock" aria-label="Điều khiển trang">
+    <button class="dock-btn" id="btn-sound-toggle" aria-label="Bật/Tắt âm thanh" title="Âm nhạc & Hiệu ứng âm">
+      <span class="sound-bars" id="sound-bars-icon">
+        <span class="sound-bar"></span>
+        <span class="sound-bar"></span>
+        <span class="sound-bar"></span>
+      </span>
+      <span class="tooltip">Bật/Tắt nhạc 🎵</span>
+    </button>
+    <button class="dock-btn" id="btn-effects-toggle" aria-label="Bật/Tắt hiệu ứng hạt sáng" title="Hiệu ứng lung linh">
+      ✨
+      <span class="tooltip">Bật/Tắt hiệu ứng ✨</span>
+    </button>
+    <button class="dock-btn" id="btn-scroll-top" aria-label="Cuộn lên đầu trang" title="Về đầu trang">
+      🌸
+      <span class="tooltip">Lên đầu trang ⬆️</span>
+    </button>
+  </aside>
+
+  <!-- ==========================================================================
+       SECTION 1: MÀN HÌNH MỞ ĐẦU — HỘP QUÀ BÍ MẬT (#intro-screen)
+       ========================================================================== -->
+  <div id="intro-screen">
+    <div class="intro-decorations" id="intro-decorations"></div>
+    
+    <div class="intro-content">
+      <div class="intro-badge">
+        <span>✨ 20/10 Special Gift ✨</span>
+      </div>
+      <h1 class="intro-title">Món quà nhỏ cho cô gái tuyệt vời 💖</h1>
+      <p class="intro-subtitle">Chạm vào hộp quà để mở điều bất ngờ đang chờ bạn...</p>
+
+      <!-- 3D Gift Box -->
+      <div class="gift-box-wrapper" id="gift-box-wrap" role="button" tabindex="0" aria-label="Hộp quà bí mật, nhấn để mở">
+        <div class="box-beam"></div>
+        <div class="gift-box-3d" id="gift-box">
+          <div class="box-bow">
+            <div class="bow-left"></div>
+            <div class="bow-right"></div>
+            <div class="bow-knot"></div>
+          </div>
+          <div class="box-lid"></div>
+          <div class="box-body"></div>
+        </div>
+      </div>
+
+      <button class="btn-open-gift" id="btn-open-gift">
+        <span>Mở quà ngay! 🎁</span>
+      </button>
+    </div>
+
+    <!-- Opening Sequential Message Reveal -->
+    <div class="intro-reveal-text" id="intro-reveal-text">
+      <div class="reveal-line" id="rev-line-1">🌷 Chào người bạn đáng mến!</div>
+      <div class="reveal-line" id="rev-line-2">Món quà này được chuẩn bị riêng cho bạn...</div>
+      <div class="reveal-line" id="rev-line-3">Chúc bạn một ngày 20/10 ngập tràn niềm vui! ✨</div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       MAIN CONTAINER: KHU VƯỜN HOA 20/10
+       ========================================================================== -->
+  <main id="garden-container">
+    
+    <!-- SECTION 3: HERO SECTION -->
+    <section class="hero-section" id="section-hero">
+      <div class="container">
+        <div class="hero-card">
+          <span class="hero-sub">Happy Vietnamese Women's Day</span>
+          <h1 class="hero-heading">Chúc mừng ngày 20/10 🌷</h1>
+          <p class="hero-message">
+            Gửi đến những cô gái tuyệt vời: Chúc bạn luôn xinh đẹp theo cách riêng, tự tin trên hành trình của mình và luôn có thật nhiều lý do để mỉm cười!
+          </p>
+          <div class="hero-badge-row">
+            <span class="hero-pill" style="border-color: #ff7597; color: #e84370; background: #fff0f5;" onclick="openSophiaModal(event)">🌹 Hoa hồng Sophia</span>
+            <span class="hero-pill" onclick="triggerFlowerEffect(event, '🌸')">🌸 Rạng rỡ mỗi ngày</span>
+            <span class="hero-pill" onclick="triggerFlowerEffect(event, '✨')">✨ Tự tin tỏa sáng</span>
+            <span class="hero-pill" onclick="triggerFlowerEffect(event, '💖')">💖 Yêu thương bản thân</span>
+            <span class="hero-pill" onclick="triggerFlowerEffect(event, '🍀')">🍀 Vạn sự may mắn</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: KHU VỰC LỜI CHÚC — NHỮNG ĐIỀU TỐT ĐẸP DÀNH CHO BẠN (6 WISH CARDS) -->
+    <section class="section-spacing" id="section-wishes">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Best Wishes for You</span>
+          <h2 class="section-title">Những Điều Tốt Đẹp Dành Cho Bạn ✨</h2>
+          <p class="section-desc">Chạm vào từng tấm thẻ để mở khóa thông điệp và hiệu ứng đặc biệt dành riêng cho bạn</p>
+        </div>
+
+        <div class="wish-grid">
+          <!-- Card 1 -->
+          <div class="wish-card-container card-theme-1" onclick="flipWishCard(this, 'flower')">
+            <div class="wish-card-inner">
+              <div class="wish-card-front">
+                <div class="card-icon-wrap">🌸</div>
+                <h3 class="card-front-title">Xinh đẹp và tự tin</h3>
+                <span class="card-front-hint">Chạm để lật thẻ ↻</span>
+              </div>
+              <div class="wish-card-back">
+                <h4 class="card-back-title">🌸 Xinh đẹp và tự tin</h4>
+                <p class="card-back-text">“Chúc bạn luôn rạng rỡ, yêu bản thân và tự tin tỏa sáng theo cách riêng của mình.”</p>
+                <div class="card-back-flourish">~ Bloom with grace ~</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="wish-card-container card-theme-2" onclick="flipWishCard(this, 'clover')">
+            <div class="wish-card-inner">
+              <div class="wish-card-front">
+                <div class="card-icon-wrap">🍀</div>
+                <h3 class="card-front-title">May mắn và bình an</h3>
+                <span class="card-front-hint">Chạm để lật thẻ ↻</span>
+              </div>
+              <div class="wish-card-back">
+                <h4 class="card-back-title">🍀 May mắn và bình an</h4>
+                <p class="card-back-text">“Mong mọi điều tốt đẹp sẽ đến với bạn, những ngày bình thường cũng có thể trở thành những ngày đáng nhớ.”</p>
+                <div class="card-back-flourish">~ Peaceful mind ~</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="wish-card-container card-theme-3" onclick="flipWishCard(this, 'star')">
+            <div class="wish-card-inner">
+              <div class="wish-card-front">
+                <div class="card-icon-wrap">✨</div>
+                <h3 class="card-front-title">Thành công rực rỡ</h3>
+                <span class="card-front-hint">Chạm để lật thẻ ↻</span>
+              </div>
+              <div class="wish-card-back">
+                <h4 class="card-back-title">✨ Thành công rực rỡ</h4>
+                <p class="card-back-text">“Chúc những nỗ lực của bạn được đền đáp, mọi mục tiêu đều dần trở thành hiện thực.”</p>
+                <div class="card-back-flourish">~ Shine your light ~</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="wish-card-container card-theme-4" onclick="flipWishCard(this, 'heart')">
+            <div class="wish-card-inner">
+              <div class="wish-card-front">
+                <div class="card-icon-wrap">💖</div>
+                <h3 class="card-front-title">Luôn được yêu thương</h3>
+                <span class="card-front-hint">Chạm để lật thẻ ↻</span>
+              </div>
+              <div class="wish-card-back">
+                <h4 class="card-back-title">💖 Luôn được yêu thương</h4>
+                <p class="card-back-text">“Mong bạn luôn gặp được những người chân thành, biết trân trọng và mang đến niềm vui cho bạn.”</p>
+                <div class="card-back-flourish">~ Cherished always ~</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="wish-card-container card-theme-5" onclick="flipWishCard(this, 'butterfly')">
+            <div class="wish-card-inner">
+              <div class="wish-card-front">
+                <div class="card-icon-wrap">🦋</div>
+                <h3 class="card-front-title">Tự do và hạnh phúc</h3>
+                <span class="card-front-hint">Chạm để lật thẻ ↻</span>
+              </div>
+              <div class="wish-card-back">
+                <h4 class="card-back-title">🦋 Tự do và hạnh phúc</h4>
+                <p class="card-back-text">“Chúc bạn đủ mạnh mẽ để theo đuổi điều mình thích, đủ dũng cảm để thay đổi và đủ bình yên để tận hưởng cuộc sống.”</p>
+                <div class="card-back-flourish">~ Free spirit ~</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 6 -->
+          <div class="wish-card-container card-theme-6" onclick="flipWishCard(this, 'ribbon')">
+            <div class="wish-card-inner">
+              <div class="wish-card-front">
+                <div class="card-icon-wrap">🎀</div>
+                <h3 class="card-front-title">Luôn vui vẻ</h3>
+                <span class="card-front-hint">Chạm để lật thẻ ↻</span>
+              </div>
+              <div class="wish-card-back">
+                <h4 class="card-back-title">🎀 Luôn vui vẻ</h4>
+                <p class="card-back-text">“Chúc bạn có thật nhiều tiếng cười, những cuộc hẹn đáng nhớ và những người bạn đồng hành tuyệt vời.”</p>
+                <div class="card-back-flourish">~ Endless laughter ~</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: MINI GAME — CHIẾC HỘP MAY MẮN 20/10 -->
+    <section class="section-spacing" id="section-game">
+      <div class="container">
+        <div class="game-section">
+          <div class="section-header">
+            <span class="section-tag">Interactive Mini Game</span>
+            <h2 class="section-title">Chiếc Hộp May Mắn 20/10 🎁</h2>
+            <p class="section-desc">Chọn một món quà bất kỳ để khám phá lời chúc dành riêng cho bạn!</p>
+          </div>
+
+          <div class="mystery-boxes-grid" id="mystery-boxes">
+            <!-- 6 Mystery Boxes -->
+            <div class="mystery-box-item" onclick="openMysteryBox(0, event)">
+              <div class="box-item-icon">🎀</div>
+              <div class="box-item-label">Hộp Dịu Dàng</div>
+            </div>
+            <div class="mystery-box-item" onclick="openMysteryBox(1, event)">
+              <div class="box-item-icon">✨</div>
+              <div class="box-item-label">Hộp Rạng Rỡ</div>
+            </div>
+            <div class="mystery-box-item" onclick="openMysteryBox(2, event)">
+              <div class="box-item-icon">🌹</div>
+              <div class="box-item-label">Hoa Sophia</div>
+            </div>
+            <div class="mystery-box-item" onclick="openMysteryBox(3, event)">
+              <div class="box-item-icon">🍀</div>
+              <div class="box-item-label">Hộp May Mắn</div>
+            </div>
+            <div class="mystery-box-item" onclick="openMysteryBox(4, event)">
+              <div class="box-item-icon">💎</div>
+              <div class="box-item-label">Hộp Tỏa Sáng</div>
+            </div>
+            <div class="mystery-box-item" onclick="openMysteryBox(5, event)">
+              <div class="box-item-icon">🍭</div>
+              <div class="box-item-label">Hộp Vui Tươi</div>
+            </div>
+          </div>
+
+          <div style="text-align: center;">
+            <button class="btn-secondary" onclick="resetMysteryBoxes()">
+              🔄 Nhận thêm một lời chúc
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Modal Revealed Wish for Mini Game -->
+    <div class="wish-reveal-modal" id="wish-modal">
+      <div class="wish-modal-card">
+        <button class="modal-close-btn" onclick="closeWishModal()" aria-label="Đóng">✕</button>
+        <span class="modal-badge" id="modal-box-name">🎁 Hộp May Mắn</span>
+        <div style="font-size: 3rem; margin-bottom: 10px;" id="modal-box-icon">✨</div>
+        <p class="modal-wish-text" id="modal-wish-text">
+          “Bạn xứng đáng với tất cả những điều tốt đẹp nhất!”
+        </p>
+        <div class="modal-btn-row">
+          <button class="btn-secondary" onclick="copyModalWish()">📋 Sao chép lời chúc</button>
+          <button class="btn-secondary" style="background: var(--pink-rose); color: #fff;" onclick="openRandomMysteryBox()">🎲 Đổi hộp khác</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Chi Tiết: Bó Hoa Hồng Sophia -->
+    <div class="wish-reveal-modal" id="sophia-modal">
+      <div class="wish-modal-card sophia-modal-card">
+        <button class="modal-close-btn" onclick="closeSophiaModal()" aria-label="Đóng">✕</button>
+        <span class="modal-badge" style="background: #ffe4e9; color: #e84370;">🌹 Quà Tặng 20/10 Đặc Biệt</span>
+        <div class="sophia-img-container">
+          <img src="hoa-hong-sophia.png" alt="Bó hoa hồng Sophia" class="sophia-modal-img">
+        </div>
+        <h3 class="sophia-modal-title">Bó Hoa Hồng Sophia Dành Riêng Cho Bạn 🌹</h3>
+        <p class="sophia-modal-sub">Sophia Pink Spray Roses — Nét đẹp ngọt ngào & kiêu sa</p>
+        <p class="modal-wish-text" style="font-size: 1.05rem; line-height: 1.7; margin: 14px 0 20px;">
+          “Những đóa hồng Sophia nhỏ nhắn xếp tầng e ấp, mang sắc hồng ngọt ngào tượng trưng cho sự dịu dàng, tự tin và niềm vui bất tận. Chúc bạn luôn rạng rỡ và ngát hương như bó hoa này!”
+        </p>
+        <div class="modal-btn-row">
+          <button class="btn-secondary" style="background: var(--pink-rose); color: #fff;" onclick="burstSophiaRosePetals(event)">
+            🌹 Tung cánh hoa hồng
+          </button>
+          <button class="btn-secondary" onclick="closeSophiaModal()">
+            💖 Cảm ơn món quà!
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECTION 6: HIỆU ỨNG ĐẶC BIỆT — CÂY HOA ĐIỀU ƯỚC 🌟 -->
+    <section class="section-spacing" id="section-tree">
+      <div class="container">
+        <div class="wish-tree-wrap">
+          <div class="section-header">
+            <span class="section-tag">Magical Moment</span>
+            <h2 class="section-title">Cây Hoa Điều Ước 🌟</h2>
+            <p class="section-desc">Gửi gắm ước nguyện vào những nhành hoa kỳ diệu để nhận phước lành đong đầy</p>
+          </div>
+
+          <!-- Magical Tree Canvas / SVG Stage -->
+          <div class="tree-stage">
+            <svg class="tree-svg" viewBox="0 0 300 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Trunk and Branches -->
+              <path d="M150 220 Q148 160 145 140 Q130 110 100 95 Q80 85 70 80" stroke="#b08968" stroke-width="8" stroke-linecap="round"/>
+              <path d="M145 140 Q160 115 190 90 Q215 70 230 65" stroke="#b08968" stroke-width="7" stroke-linecap="round"/>
+              <path d="M145 140 Q150 100 150 60" stroke="#b08968" stroke-width="6" stroke-linecap="round"/>
+              <path d="M100 95 Q115 75 125 55" stroke="#b08968" stroke-width="4.5" stroke-linecap="round"/>
+              <path d="M190 90 Q175 70 170 50" stroke="#b08968" stroke-width="4.5" stroke-linecap="round"/>
+
+              <!-- Foliage & Glow Blossoms -->
+              <circle class="tree-blossom" id="tb-1" cx="70" cy="80" r="16" fill="#ff7597"/>
+              <circle class="tree-blossom" id="tb-2" cx="100" cy="55" r="18" fill="#f472b6"/>
+              <circle class="tree-blossom" id="tb-3" cx="125" cy="50" r="15" fill="#fbcfe8"/>
+              <circle class="tree-blossom" id="tb-4" cx="150" cy="45" r="22" fill="#ff4d6d"/>
+              <circle class="tree-blossom" id="tb-5" cx="175" cy="48" r="16" fill="#f43f5e"/>
+              <circle class="tree-blossom" id="tb-6" cx="205" cy="65" r="20" fill="#fb7185"/>
+              <circle class="tree-blossom" id="tb-7" cx="230" cy="70" r="15" fill="#fda4af"/>
+              <circle class="tree-blossom" id="tb-8" cx="140" cy="90" r="14" fill="#f472b6"/>
+
+              <!-- Small decorative flowers -->
+              <circle cx="70" cy="80" r="5" fill="#fff"/>
+              <circle cx="100" cy="55" r="5" fill="#fff"/>
+              <circle cx="150" cy="45" r="7" fill="#fff"/>
+              <circle cx="205" cy="65" r="6" fill="#fff"/>
+              <circle cx="230" cy="70" r="5" fill="#fff"/>
+            </svg>
+
+            <!-- Converging Glowing Heart Particle Overlay -->
+            <div class="tree-heart-particles" id="tree-heart">
+              <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M50 85 C20 60, 5 40, 5 25 C5 12, 16 5, 28 5 C38 5, 45 11, 50 20 C55 11, 62 5, 72 5 C84 5, 95 12, 95 25 C95 40, 80 60, 50 85 Z" 
+                      fill="url(#heart-gradient)" filter="url(#glow-filter)"/>
+                <defs>
+                  <linearGradient id="heart-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#ff7597"/>
+                    <stop offset="50%" stop-color="#f43f5e"/>
+                    <stop offset="100%" stop-color="#fb7185"/>
+                  </linearGradient>
+                  <filter id="glow-filter" x="-20%" y="-20%" width="140%" height="140%">
+                    <feGaussianBlur stdDeviation="4" result="blur"/>
+                    <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+                  </filter>
+                </defs>
+              </svg>
+            </div>
+          </div>
+
+          <div style="margin-bottom: 24px;">
+            <button class="btn-open-gift" id="btn-make-wish" onclick="triggerWishTree()">
+              <span>Gửi một điều ước 🌟</span>
+            </button>
+          </div>
+
+          <!-- Animated Wishes Appearing Line by Line -->
+          <div class="wish-tree-output" id="wish-tree-output">
+            <div class="tree-line-text" id="tw-1">Chúc bạn luôn đủ sức khỏe để khám phá thế giới.</div>
+            <div class="tree-line-text" id="tw-2">Đủ tự tin để bước qua những thử thách.</div>
+            <div class="tree-line-text" id="tw-3">Đủ may mắn để gặp những cơ hội tuyệt vời.</div>
+            <div class="tree-line-text" id="tw-4">Đủ yêu thương để trân trọng chính mình.</div>
+            <div class="tree-line-text" id="tw-5">Và đủ hạnh phúc để nhận ra rằng cuộc sống luôn có những điều đáng mong chờ.</div>
+            <div class="tree-line-final" id="tw-final">Hy vọng tuổi trẻ của bạn sẽ có thật nhiều hoa nở và thật nhiều câu chuyện đẹp để kể. 🌷</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 7: GÓC LƯU GIỮ KỶ NIỆM — NHỮNG CÔ GÁI TUYỆT VỜI (POLAROID SCRAPBOOK) -->
+    <section class="section-spacing" id="section-memories">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Sweet Memories</span>
+          <h2 class="section-title">Góc Lưu Giữ Kỷ Niệm 📸</h2>
+          <p class="section-desc">Mỗi cô gái là một đóa hoa độc nhất vô nhị tô điểm cho thế giới thêm rạng rỡ</p>
+        </div>
+
+        <div class="scrapbook-grid">
+          <!-- Polaroid 1: Bó hoa hồng Sophia -->
+          <div class="polaroid-card polaroid-sophia" onclick="openSophiaModal(event)" title="Chạm để xem chi tiết Bó hoa hồng Sophia">
+            <div class="washi-tape"></div>
+            <div class="polaroid-photo">
+              <img src="hoa-hong-sophia.png" alt="Bó hoa hồng Sophia" class="polaroid-img" loading="lazy">
+              <div class="photo-overlay-badge">🌹 Chạm để xem</div>
+            </div>
+            <div class="polaroid-caption">“Hoa hồng Sophia rực rỡ”</div>
+            <div class="polaroid-subcaption">Cảm ơn vì đã xuất hiện trong cuộc sống này 💕</div>
+            <div class="polaroid-sticker">🌹</div>
+          </div>
+
+          <!-- Polaroid 2 -->
+          <div class="polaroid-card">
+            <div class="washi-tape"></div>
+            <div class="polaroid-photo">
+              <!-- Inline Cute Star Butterfly Illustration -->
+              <svg width="120" height="120" viewBox="0 0 100 100" fill="none">
+                <circle cx="50" cy="50" r="42" fill="#ede9fe"/>
+                <path d="M50 50 Q30 20 15 35 Q5 50 35 60 Z" fill="#c084fc"/>
+                <path d="M50 50 Q70 20 85 35 Q95 50 65 60 Z" fill="#c084fc"/>
+                <path d="M50 50 Q35 75 25 80 Q15 80 40 65 Z" fill="#a855f7"/>
+                <path d="M50 50 Q65 75 75 80 Q85 80 60 65 Z" fill="#a855f7"/>
+                <ellipse cx="50" cy="52" rx="4" ry="16" fill="#581c87"/>
+              </svg>
+            </div>
+            <div class="polaroid-caption">“Mỗi người đều có một vẻ đẹp rất riêng.”</div>
+            <div class="polaroid-sticker">🦋</div>
+          </div>
+
+          <!-- Polaroid 3 -->
+          <div class="polaroid-card">
+            <div class="washi-tape"></div>
+            <div class="polaroid-photo">
+              <!-- Inline Cute Tea & Friendship Illustration -->
+              <svg width="120" height="120" viewBox="0 0 100 100" fill="none">
+                <circle cx="50" cy="50" r="42" fill="#e6faf2"/>
+                <rect x="30" y="45" width="40" height="30" rx="8" fill="#34d399"/>
+                <path d="M70 52 C78 52, 82 60, 70 66" stroke="#34d399" stroke-width="4" stroke-linecap="round" fill="none"/>
+                <path d="M42 38 Q45 32 42 26" stroke="#10b981" stroke-width="2.5" stroke-linecap="round"/>
+                <path d="M50 36 Q53 30 50 24" stroke="#10b981" stroke-width="2.5" stroke-linecap="round"/>
+                <circle cx="43" cy="58" r="2" fill="#064e3b"/>
+                <circle cx="57" cy="58" r="2" fill="#064e3b"/>
+                <path d="M48 64 Q50 67 52 64" stroke="#064e3b" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div class="polaroid-caption">“Hy vọng chúng ta sẽ có thêm nhiều kỷ niệm đẹp.”</div>
+            <div class="polaroid-sticker">🍀</div>
+          </div>
+
+          <!-- Polaroid 4 -->
+          <div class="polaroid-card">
+            <div class="washi-tape"></div>
+            <div class="polaroid-photo">
+              <!-- Inline Sparkling Sun & Crown Illustration -->
+              <svg width="120" height="120" viewBox="0 0 100 100" fill="none">
+                <circle cx="50" cy="50" r="42" fill="#fef3c7"/>
+                <path d="M25 60 L35 38 L50 50 L65 38 L75 60 Z" fill="#fbbf24"/>
+                <circle cx="25" cy="60" r="4" fill="#f59e0b"/>
+                <circle cx="35" cy="38" r="4" fill="#f59e0b"/>
+                <circle cx="50" cy="50" r="4" fill="#f59e0b"/>
+                <circle cx="65" cy="38" r="4" fill="#f59e0b"/>
+                <circle cx="75" cy="60" r="4" fill="#f59e0b"/>
+                <rect x="25" y="62" width="50" height="8" rx="4" fill="#f59e0b"/>
+              </svg>
+            </div>
+            <div class="polaroid-caption">“Chúc những cô gái tuyệt vời luôn gặp những điều tuyệt vời.”</div>
+            <div class="polaroid-sticker">✨</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 8: LÁ THƯ CHÚC MỪNG 20/10 💌 -->
+    <section class="section-spacing" id="section-letter">
+      <div class="container">
+        <div class="letter-wrapper">
+          <div class="letter-corner top-left"></div>
+          <div class="letter-corner top-right"></div>
+          <div class="letter-corner bottom-left"></div>
+          <div class="letter-corner bottom-right"></div>
+
+          <div class="letter-header">
+            <div class="letter-stamp">💌</div>
+            <h2 class="letter-title">Gửi những cô gái tuyệt vời 💌</h2>
+          </div>
+
+          <!-- Typewritten Letter Content -->
+          <div class="letter-body" id="letter-body-text"></div>
+
+          <div class="letter-footer">
+            <div class="letter-controls">
+              <button class="btn-secondary" id="btn-read-all-letter" onclick="revealEntireLetter()">
+                ⚡ Đọc toàn bộ thư
+              </button>
+            </div>
+            <div class="letter-signature">
+              <span>Happy Women's Day!</span>
+              <span class="letter-heart-glow">💖</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 9: MÀN KẾT THÚC — BỮA TIỆC ÁNH SÁNG 20/10 (FINALE) -->
+    <section class="section-spacing finale-section" id="section-finale">
+      <div class="container">
+        <div class="finale-card">
+          <button class="finale-btn-trigger" id="btn-start-party" onclick="triggerLightParty()">
+            <span>🎉 Gửi lời chúc đến bạn bè!</span>
+          </button>
+
+          <div class="party-banner" id="party-banner">
+            <h2 class="party-title-big">Chúc mừng ngày 20/10! 🎆</h2>
+            <p class="party-sub-big">
+              Chúc tất cả những cô gái luôn xinh đẹp, tự tin, thành công và hạnh phúc! 💖
+            </p>
+            <div class="party-quote-final">
+              “Be happy. Be confident. Be yourself. 🌸”
+            </div>
+
+            <div class="finale-nav-row">
+              <button class="btn-secondary" onclick="restartJourney()">
+                🔄 Xem lại món quà
+              </button>
+              <button class="btn-secondary" style="background: var(--pink-rose); color: #fff;" onclick="burstMoreFireworks()">
+                🎆 Tạo thêm khoảnh khắc may mắn
+              </button>
+              <button class="btn-secondary" onclick="toggleParticleEffects()">
+                ✨ Bật/Tắt hiệu ứng
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>Made with 💖 for all amazing women on Vietnamese Women's Day 20/10</p>
+      <p style="margin-top: 6px; font-size: 0.82rem; opacity: 0.8;">“Mỗi nụ cười của bạn là một đóa hoa thơm ngát của cuộc đời.” 🌷</p>
+    </footer>
+
+  </main>
+
+  <!-- ==========================================================================
+       JAVASCRIPT CODE
+       ========================================================================== -->
+  <script>
+    /* ==========================================================================
+       1. WEB AUDIO API SYNTHESIZER (ZERO EXTERNAL AUDIO DEPENDENCY)
+       ========================================================================== */
+    class SoundEngine {
+      constructor() {
+        this.ctx = null;
+        this.isMuted = false;
+        this.bgmPlaying = false;
+        this.timer = null;
+        this.step = 0;
+        
+        // Gentle Dreamy Chord Progression in F Major / D Minor (Music Box / Piano Lofi)
+        // Chords: Fmaj7 (F3, C4, E4, A4) -> Am7 (A3, C4, E4, G4) -> Bbmaj7 (Bb3, D4, F4, A4) -> C7sus (C4, F4, G4, Bb4)
+        this.chords = [
+          [174.61, 261.63, 329.63, 440.00], // Fmaj7
+          [220.00, 261.63, 329.63, 392.00], // Am7
+          [233.08, 293.66, 349.23, 440.00], // Bbmaj7
+          [261.63, 349.23, 392.00, 466.16]  // C7sus
+        ];
+
+        this.melody = [
+          440.00, 523.25, 659.25, 523.25, 
+          392.00, 440.00, 523.25, 440.00,
+          349.23, 440.00, 523.25, 587.33,
+          523.25, 440.00, 392.00, 349.23
+        ];
+      }
+
+      init() {
+        if (!this.ctx) {
+          const AudioContext = window.AudioContext || window.webkitAudioContext;
+          if (AudioContext) {
+            this.ctx = new AudioContext();
+          }
+        }
+        if (this.ctx && this.ctx.state === 'suspended') {
+          this.ctx.resume();
+        }
+      }
+
+      playTone(freq, type = 'sine', duration = 1.2, gainLevel = 0.15) {
+        if (this.isMuted || !this.ctx) return;
+        try {
+          const osc = this.ctx.createOscillator();
+          const gain = this.ctx.createGain();
+          osc.type = type;
+          osc.frequency.setValueAtTime(freq, this.ctx.currentTime);
+
+          gain.gain.setValueAtTime(gainLevel, this.ctx.currentTime);
+          gain.gain.exponentialRampToValueAtTime(0.0001, this.ctx.currentTime + duration);
+
+          osc.connect(gain);
+          gain.connect(this.ctx.destination);
+
+          osc.start();
+          osc.stop(this.ctx.currentTime + duration);
+        } catch (e) {
+          console.warn('Audio error:', e);
+        }
+      }
+
+      // Magical Chime Arpeggio
+      playChime() {
+        this.init();
+        if (this.isMuted) return;
+        const notes = [523.25, 659.25, 783.99, 1046.50, 1318.51]; // C5, E5, G5, C6, E6
+        notes.forEach((freq, idx) => {
+          setTimeout(() => {
+            this.playTone(freq, 'triangle', 1.0, 0.12);
+          }, idx * 90);
+        });
+      }
+
+      // Sparkle / Star sound
+      playSparkle() {
+        this.init();
+        if (this.isMuted) return;
+        const notes = [880.00, 1174.66, 1396.91, 1760.00];
+        notes.forEach((freq, idx) => {
+          setTimeout(() => {
+            this.playTone(freq, 'sine', 0.6, 0.08);
+          }, idx * 60);
+        });
+      }
+
+      // Pop / Flower open sound
+      playPop() {
+        this.init();
+        if (this.isMuted) return;
+        this.playTone(440, 'sine', 0.15, 0.2);
+        setTimeout(() => this.playTone(880, 'triangle', 0.3, 0.15), 50);
+      }
+
+      // Firework burst sound
+      playFirework() {
+        this.init();
+        if (this.isMuted || !this.ctx) return;
+        try {
+          // Low boom
+          const osc = this.ctx.createOscillator();
+          const gain = this.ctx.createGain();
+          osc.type = 'triangle';
+          osc.frequency.setValueAtTime(140, this.ctx.currentTime);
+          osc.frequency.exponentialRampToValueAtTime(30, this.ctx.currentTime + 0.5);
+
+          gain.gain.setValueAtTime(0.25, this.ctx.currentTime);
+          gain.gain.exponentialRampToValueAtTime(0.001, this.ctx.currentTime + 0.6);
+
+          osc.connect(gain);
+          gain.connect(this.ctx.destination);
+          osc.start();
+          osc.stop(this.ctx.currentTime + 0.6);
+
+          // Sparkle crackles
+          setTimeout(() => this.playSparkle(), 200);
+        } catch (e) {}
+      }
+
+      // Gentle Background Music Synthesizer
+      startBGM() {
+        this.init();
+        if (this.bgmPlaying) return;
+        this.bgmPlaying = true;
+        const soundBars = document.getElementById('sound-bars-icon');
+        if (soundBars) soundBars.classList.add('playing');
+
+        this.scheduleMusicStep();
+      }
+
+      scheduleMusicStep() {
+        if (!this.bgmPlaying || this.isMuted) return;
+
+        const chordIdx = Math.floor(this.step / 4) % this.chords.length;
+        const chord = this.chords[chordIdx];
+        const melodyNote = this.melody[this.step % this.melody.length];
+
+        // Play chord root on beat 0
+        if (this.step % 4 === 0) {
+          chord.forEach((freq, i) => {
+            setTimeout(() => {
+              this.playTone(freq, 'sine', 2.0, 0.04);
+            }, i * 40);
+          });
+        }
+
+        // Play gentle music box melody
+        if (Math.random() > 0.2) {
+          this.playTone(melodyNote, 'triangle', 0.9, 0.07);
+        }
+
+        this.step++;
+        this.timer = setTimeout(() => this.scheduleMusicStep(), 480);
+      }
+
+      stopBGM() {
+        this.bgmPlaying = false;
+        if (this.timer) clearTimeout(this.timer);
+        const soundBars = document.getElementById('sound-bars-icon');
+        if (soundBars) soundBars.classList.remove('playing');
+      }
+
+      toggle() {
+        this.init();
+        this.isMuted = !this.isMuted;
+        const btn = document.getElementById('btn-sound-toggle');
+        const soundBars = document.getElementById('sound-bars-icon');
+
+        if (this.isMuted) {
+          if (btn) btn.classList.remove('active');
+          if (soundBars) soundBars.classList.remove('playing');
+          this.stopBGM();
+        } else {
+          if (btn) btn.classList.add('active');
+          this.startBGM();
+          this.playChime();
+        }
+      }
+    }
+
+    const sound = new SoundEngine();
+
+    /* ==========================================================================
+       2. AMBIENT PARTICLES & PETALS CANVAS ENGINE
+       ========================================================================== */
+    class ParticleEngine {
+      constructor(canvasId) {
+        this.canvas = document.getElementById(canvasId);
+        this.ctx = this.canvas.getContext('2d');
+        this.particles = [];
+        this.fireflies = [];
+        this.width = 0;
+        this.height = 0;
+        this.isRunning = true;
+        this.mouse = { x: -100, y: -100 };
+
+        this.init();
+      }
+
+      init() {
+        this.resize();
+        window.addEventListener('resize', () => this.resize());
+        window.addEventListener('mousemove', (e) => {
+          this.mouse.x = e.clientX;
+          this.mouse.y = e.clientY;
+        });
+
+        // Populate falling cherry blossom petals
+        const petalCount = window.innerWidth < 768 ? 22 : 45;
+        for (let i = 0; i < petalCount; i++) {
+          this.particles.push(this.createPetal(true));
+        }
+
+        // Populate floating glowing fireflies
+        const fireflyCount = window.innerWidth < 768 ? 16 : 30;
+        for (let i = 0; i < fireflyCount; i++) {
+          this.fireflies.push(this.createFirefly());
+        }
+
+        this.loop();
+      }
+
+      resize() {
+        this.width = this.canvas.width = window.innerWidth;
+        this.height = this.canvas.height = window.innerHeight;
+      }
+
+      createPetal(randomY = false) {
+        const colors = [
+          'rgba(255, 182, 193, 0.75)', // pastel pink
+          'rgba(255, 192, 203, 0.85)', // light pink
+          'rgba(255, 240, 245, 0.9)',  // lavender blush
+          'rgba(254, 205, 211, 0.8)',  // rose soft
+          'rgba(230, 230, 250, 0.75)'  // lavender
+        ];
+        return {
+          x: Math.random() * this.width,
+          y: randomY ? Math.random() * this.height : -30,
+          size: Math.random() * 9 + 8,
+          speedY: Math.random() * 1.4 + 0.8,
+          speedX: Math.random() * 1.5 - 0.4,
+          rotation: Math.random() * 360,
+          rotSpeed: (Math.random() - 0.5) * 2,
+          oscillation: Math.random() * 0.05,
+          color: colors[Math.floor(Math.random() * colors.length)]
+        };
+      }
+
+      createFirefly() {
+        return {
+          x: Math.random() * this.width,
+          y: Math.random() * this.height,
+          radius: Math.random() * 2.8 + 1.2,
+          vx: (Math.random() - 0.5) * 0.7,
+          vy: (Math.random() - 0.5) * 0.7,
+          alpha: Math.random() * 0.8 + 0.2,
+          alphaSpeed: (Math.random() * 0.02 + 0.01) * (Math.random() > 0.5 ? 1 : -1),
+          color: Math.random() > 0.4 ? 'rgba(255, 224, 130,' : 'rgba(214, 184, 255,'
+        };
+      }
+
+      loop() {
+        if (this.isRunning) {
+          this.ctx.clearRect(0, 0, this.width, this.height);
+
+          // Update & draw fireflies
+          for (let f of this.fireflies) {
+            f.x += f.vx;
+            f.y += f.vy;
+            f.alpha += f.alphaSpeed;
+
+            if (f.alpha <= 0.15 || f.alpha >= 0.95) f.alphaSpeed = -f.alphaSpeed;
+            if (f.x < 0) f.x = this.width;
+            if (f.x > this.width) f.x = 0;
+            if (f.y < 0) f.y = this.height;
+            if (f.y > this.height) f.y = 0;
+
+            this.ctx.beginPath();
+            this.ctx.arc(f.x, f.y, f.radius, 0, Math.PI * 2);
+            this.ctx.fillStyle = `${f.color} ${f.alpha})`;
+            this.ctx.shadowBlur = 10;
+            this.ctx.shadowColor = '#ffe082';
+            this.ctx.fill();
+            this.ctx.shadowBlur = 0;
+          }
+
+          // Update & draw falling petals
+          for (let p of this.particles) {
+            p.y += p.speedY;
+            p.x += Math.sin(p.y * p.oscillation) * 1.2 + p.speedX;
+            p.rotation += p.rotSpeed;
+
+            if (p.y > this.height + 30) {
+              Object.assign(p, this.createPetal(false));
+            }
+
+            this.ctx.save();
+            this.ctx.translate(p.x, p.y);
+            this.ctx.rotate((p.rotation * Math.PI) / 180);
+
+            // Draw petal curved shape
+            this.ctx.beginPath();
+            this.ctx.moveTo(0, 0);
+            this.ctx.bezierCurveTo(p.size / 2, -p.size / 2, p.size, 0, 0, p.size);
+            this.ctx.bezierCurveTo(-p.size, 0, -p.size / 2, -p.size / 2, 0, 0);
+            this.ctx.fillStyle = p.color;
+            this.ctx.fill();
+            this.ctx.restore();
+          }
+        }
+
+        requestAnimationFrame(() => this.loop());
+      }
+    }
+
+    const ambientParticles = new ParticleEngine('ambient-canvas');
+
+    /* ==========================================================================
+       3. FIREWORKS FINALE ENGINE
+       ========================================================================== */
+    class FireworksEngine {
+      constructor(canvasId) {
+        this.canvas = document.getElementById(canvasId);
+        this.ctx = this.canvas.getContext('2d');
+        this.fireworks = [];
+        this.particles = [];
+        this.width = 0;
+        this.height = 0;
+        this.isActive = false;
+
+        this.resize();
+        window.addEventListener('resize', () => this.resize());
+      }
+
+      resize() {
+        this.width = this.canvas.width = window.innerWidth;
+        this.height = this.canvas.height = window.innerHeight;
+      }
+
+      launch(x, y, targetX, targetY, color) {
+        this.fireworks.push({
+          x: x || Math.random() * this.width,
+          y: y || this.height,
+          targetX: targetX || Math.random() * this.width * 0.8 + this.width * 0.1,
+          targetY: targetY || Math.random() * this.height * 0.45 + 80,
+          speed: 7 + Math.random() * 4,
+          angle: 0,
+          color: color || `hsl(${Math.random() * 60 + 300}, 100%, 75%)`
+        });
+      }
+
+      explode(x, y, color) {
+        sound.playFirework();
+        const count = 65;
+        for (let i = 0; i < count; i++) {
+          const angle = (Math.PI * 2 * i) / count;
+          const speed = Math.random() * 6 + 1.5;
+          this.particles.push({
+            x: x,
+            y: y,
+            vx: Math.cos(angle) * speed,
+            vy: Math.sin(angle) * speed,
+            alpha: 1,
+            decay: Math.random() * 0.015 + 0.012,
+            size: Math.random() * 3 + 1.5,
+            color: color || `hsl(${Math.random() * 60 + 320}, 95%, 70%)`
+          });
+        }
+      }
+
+      start() {
+        this.isActive = true;
+        this.canvas.style.display = 'block';
+        this.loop();
+
+        // Auto launch fireworks bursts
+        this.timer = setInterval(() => {
+          if (this.isActive && Math.random() > 0.3) {
+            this.launch();
+          }
+        }, 600);
+      }
+
+      stop() {
+        this.isActive = false;
+        clearInterval(this.timer);
+        this.canvas.style.display = 'none';
+        this.fireworks = [];
+        this.particles = [];
+      }
+
+      loop() {
+        if (!this.isActive) return;
+
+        this.ctx.globalCompositeOperation = 'destination-out';
+        this.ctx.fillStyle = 'rgba(0, 0, 0, 0.25)';
+        this.ctx.fillRect(0, 0, this.width, this.height);
+        this.ctx.globalCompositeOperation = 'lighter';
+
+        // Update rockets
+        for (let i = this.fireworks.length - 1; i >= 0; i--) {
+          const fw = this.fireworks[i];
+          const dx = fw.targetX - fw.x;
+          const dy = fw.targetY - fw.y;
+          const dist = Math.sqrt(dx * dx + dy * dy);
+
+          if (dist < 10 || fw.y <= fw.targetY) {
+            this.explode(fw.targetX, fw.targetY, fw.color);
+            this.fireworks.splice(i, 1);
+          } else {
+            fw.x += (dx / dist) * fw.speed;
+            fw.y += (dy / dist) * fw.speed;
+
+            this.ctx.beginPath();
+            this.ctx.arc(fw.x, fw.y, 3, 0, Math.PI * 2);
+            this.ctx.fillStyle = '#fff';
+            this.ctx.fill();
+          }
+        }
+
+        // Update explosion particles
+        for (let i = this.particles.length - 1; i >= 0; i--) {
+          const p = this.particles[i];
+          p.x += p.vx;
+          p.y += p.vy;
+          p.vy += 0.06; // gravity
+          p.alpha -= p.decay;
+
+          if (p.alpha <= 0) {
+            this.particles.splice(i, 1);
+          } else {
+            this.ctx.beginPath();
+            this.ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+            this.ctx.fillStyle = p.color;
+            this.ctx.globalAlpha = p.alpha;
+            this.ctx.shadowBlur = 8;
+            this.ctx.shadowColor = p.color;
+            this.ctx.fill();
+            this.ctx.globalAlpha = 1;
+            this.ctx.shadowBlur = 0;
+          }
+        }
+
+        requestAnimationFrame(() => this.loop());
+      }
+    }
+
+    const fireworksEngine = new FireworksEngine('fireworks-canvas');
+
+    /* ==========================================================================
+       4. SECTION 1: OPENING GIFT BOX INTERACTION
+       ========================================================================== */
+    const introScreen = document.getElementById('intro-screen');
+    const gardenContainer = document.getElementById('garden-container');
+    const giftBox = document.getElementById('gift-box');
+    const btnOpenGift = document.getElementById('btn-open-gift');
+    const introRevealText = document.getElementById('intro-reveal-text');
+    let hasOpenedGift = false;
+
+    // Decorate intro background with floating bubble stars
+    const introDecor = document.getElementById('intro-decorations');
+    for (let i = 0; i < 28; i++) {
+      const bubble = document.createElement('div');
+      bubble.className = 'intro-bubble';
+      const size = Math.random() * 24 + 10;
+      bubble.style.width = `${size}px`;
+      bubble.style.height = `${size}px`;
+      bubble.style.left = `${Math.random() * 100}%`;
+      bubble.style.animationDelay = `${Math.random() * 7}s`;
+      bubble.style.animationDuration = `${Math.random() * 6 + 6}s`;
+      bubble.style.background = Math.random() > 0.5 
+        ? 'radial-gradient(circle, rgba(255,255,255,0.9), rgba(255,182,193,0.4))'
+        : 'radial-gradient(circle, rgba(255,255,255,0.9), rgba(214,184,255,0.4))';
+      introDecor.appendChild(bubble);
+    }
+
+    function handleOpenGift() {
+      if (hasOpenedGift) return;
+      hasOpenedGift = true;
+
+      // Start sound & gentle BGM
+      sound.playChime();
+      sound.startBGM();
+      const soundBtn = document.getElementById('btn-sound-toggle');
+      if (soundBtn) soundBtn.classList.add('active');
+
+      // 1. Shake gift box
+      giftBox.classList.add('shaking');
+
+      setTimeout(() => {
+        // 2. Open lid, light beam
+        giftBox.classList.remove('shaking');
+        giftBox.classList.add('opened');
+        btnOpenGift.style.display = 'none';
+
+        // Spawn confetti sparkles from box
+        sound.playPop();
+        sound.playSparkle();
+        spawnConfettiBurst();
+
+        // 3. Show reveal lines sequentially
+        setTimeout(() => {
+          introRevealText.classList.add('show');
+          document.getElementById('rev-line-1').classList.add('visible');
+        }, 400);
+
+        setTimeout(() => {
+          document.getElementById('rev-line-2').classList.add('visible');
+        }, 1200);
+
+        setTimeout(() => {
+          document.getElementById('rev-line-3').classList.add('visible');
+        }, 2000);
+
+        // 4. Smooth transition into main flower garden
+        setTimeout(() => {
+          introScreen.classList.add('unlocked');
+          gardenContainer.classList.add('loaded');
+          startTypewriterLetter();
+        }, 3400);
+
+      }, 800);
+    }
+
+    btnOpenGift.addEventListener('click', handleOpenGift);
+    giftBox.addEventListener('click', handleOpenGift);
+
+    function spawnConfettiBurst() {
+      const symbols = ['🌸', '✨', '💖', '🌷', '⭐', '🎀', '🍀', '🦋'];
+      for (let i = 0; i < 40; i++) {
+        const span = document.createElement('span');
+        span.textContent = symbols[Math.floor(Math.random() * symbols.length)];
+        span.style.position = 'fixed';
+        span.style.left = '50%';
+        span.style.top = '50%';
+        span.style.fontSize = `${Math.random() * 20 + 16}px`;
+        span.style.pointerEvents = 'none';
+        span.style.zIndex = '999';
+
+        const angle = Math.random() * Math.PI * 2;
+        const dist = Math.random() * 280 + 100;
+        const tx = Math.cos(angle) * dist;
+        const ty = Math.sin(angle) * dist - 80;
+
+        span.animate([
+          { transform: 'translate(-50%, -50%) scale(0.2) rotate(0deg)', opacity: 1 },
+          { transform: `translate(calc(-50% + ${tx}px), calc(-50% + ${ty}px)) scale(1.4) rotate(${Math.random() * 720}deg)`, opacity: 0 }
+        ], {
+          duration: 1600 + Math.random() * 800,
+          easing: 'cubic-bezier(0.16, 1, 0.3, 1)',
+          fill: 'forwards'
+        });
+
+        document.body.appendChild(span);
+        setTimeout(() => span.remove(), 2500);
+      }
+    }
+
+    /* ==========================================================================
+       5. SECTION 4: WISH CARDS (FLIP & SPECIAL EFFECTS)
+       ========================================================================== */
+    function flipWishCard(cardContainer, type) {
+      cardContainer.classList.toggle('flipped');
+      sound.playSparkle();
+
+      const rect = cardContainer.getBoundingClientRect();
+      const originX = rect.left + rect.width / 2;
+      const originY = rect.top + rect.height / 2;
+
+      let symbol = '✨';
+      if (type === 'flower') symbol = '🌸';
+      if (type === 'clover') symbol = '🍀';
+      if (type === 'star') symbol = '⭐';
+      if (type === 'heart') symbol = '💖';
+      if (type === 'butterfly') symbol = '🦋';
+      if (type === 'ribbon') symbol = '🎀';
+
+      for (let i = 0; i < 12; i++) {
+        createFloatingSymbol(originX, originY, symbol);
+      }
+    }
+
+    function createFloatingSymbol(x, y, char) {
+      const el = document.createElement('div');
+      el.textContent = char;
+      el.style.position = 'fixed';
+      el.style.left = `${x}px`;
+      el.style.top = `${y}px`;
+      el.style.pointerEvents = 'none';
+      el.style.fontSize = `${Math.random() * 14 + 16}px`;
+      el.style.zIndex = '1000';
+
+      const angle = Math.random() * Math.PI * 2;
+      const dist = Math.random() * 120 + 40;
+      const tx = Math.cos(angle) * dist;
+      const ty = Math.sin(angle) * dist - 50;
+
+      el.animate([
+        { transform: 'translate(-50%, -50%) scale(0.5)', opacity: 1 },
+        { transform: `translate(calc(-50% + ${tx}px), calc(-50% + ${ty}px)) scale(1.3)`, opacity: 0 }
+      ], {
+        duration: 1100 + Math.random() * 400,
+        easing: 'ease-out',
+        fill: 'forwards'
+      });
+
+      document.body.appendChild(el);
+      setTimeout(() => el.remove(), 1600);
+    }
+
+    function triggerFlowerEffect(e, char) {
+      sound.playPop();
+      const rect = e.target.getBoundingClientRect();
+      for (let i = 0; i < 8; i++) {
+        createFloatingSymbol(rect.left + rect.width / 2, rect.top, char);
+      }
+    }
+
+    /* ==========================================================================
+       6. SECTION 5: MINI GAME — CHIẾC HỘP MAY MẮN 20/10
+       ========================================================================== */
+    const mysteryQuotes = [
+      "“Bạn xứng đáng với tất cả những điều tốt đẹp nhất!” 💖",
+      "“Hôm nay hãy tự thưởng cho mình một điều thật vui nhé!” 🍰",
+      "“Mong mọi deadline đều nhẹ nhàng và mọi kế hoạch đều suôn sẻ!” 🍀",
+      "“Chúc ví tiền luôn đầy, tâm trạng luôn vui và cuộc sống luôn chill!” ☕",
+      "“Chúc bạn gặp nhiều may mắn và ít gặp những chuyện đau đầu!” 🌈",
+      "“Mong những điều bạn âm thầm cố gắng sớm nở hoa!” 🌷",
+      "“Bạn không cần hoàn hảo, chỉ cần là chính mình!” ✨",
+      "“Chúc bạn luôn có đủ dũng khí để làm điều mình yêu thích!” 🦋",
+      "“Một ngày thật đẹp đang chờ bạn ở phía trước!” ☀️",
+      "“Chúc bạn có thật nhiều ảnh đẹp, nhiều chuyến đi vui và nhiều kỷ niệm đáng nhớ!” 📸",
+      "“Mong nụ cười của bạn luôn nhiều hơn những lần lo lắng!” 🌸",
+      "“Chúc bạn luôn gặp đúng người, đúng thời điểm và đúng cơ hội!” 🎀",
+      "“Tặng bạn bó hoa hồng Sophia ngát hương! 🌹 Chúc bạn luôn rạng rỡ, kiêu sa và ngập tràn hạnh phúc!”"
+    ];
+
+    const boxNames = [
+      "Hộp Dịu Dàng 🎀",
+      "Hộp Rạng Rỡ ✨",
+      "Hộp Hoa Sophia 🌹",
+      "Hộp May Mắn 🍀",
+      "Hộp Tỏa Sáng 💎",
+      "Hộp Vui Tươi 🍭"
+    ];
+
+    const boxIcons = ["🎀", "✨", "🌹", "🍀", "💎", "🍭"];
+
+    let isGameBusy = false;
+
+    function openMysteryBox(idx, event) {
+      if (isGameBusy) return;
+      isGameBusy = true;
+
+      sound.playPop();
+      sound.playChime();
+
+      const items = document.querySelectorAll('.mystery-box-item');
+      items.forEach(el => el.classList.remove('selected'));
+      if (items[idx]) items[idx].classList.add('selected');
+
+      // Sparks
+      if (event) {
+        for (let i = 0; i < 15; i++) {
+          createFloatingSymbol(event.clientX, event.clientY, boxIcons[idx]);
+        }
+      }
+
+      setTimeout(() => {
+        let randomQuote;
+        if (idx === 2) {
+          randomQuote = "“Tặng bạn bó hoa hồng Sophia ngát hương! 🌹 Chúc bạn luôn ngọt ngào, dịu dàng và tự tin tỏa sáng rực rỡ!”";
+        } else {
+          randomQuote = mysteryQuotes[Math.floor(Math.random() * mysteryQuotes.length)];
+        }
+        
+        const modal = document.getElementById('wish-modal');
+        const modalTitle = document.getElementById('modal-box-name');
+        const modalIcon = document.getElementById('modal-box-icon');
+        const modalText = document.getElementById('modal-wish-text');
+
+        modalTitle.textContent = boxNames[idx] || "Hộp May Mắn 🎁";
+        modalIcon.textContent = boxIcons[idx] || "✨";
+        modalText.textContent = randomQuote;
+
+        modal.classList.add('active');
+        isGameBusy = false;
+      }, 500);
+    }
+
+    function openRandomMysteryBox() {
+      const randIdx = Math.floor(Math.random() * 6);
+      openMysteryBox(randIdx);
+    }
+
+    function closeWishModal() {
+      document.getElementById('wish-modal').classList.remove('active');
+    }
+
+    function resetMysteryBoxes() {
+      document.querySelectorAll('.mystery-box-item').forEach(el => el.classList.remove('selected'));
+      sound.playPop();
+      openRandomMysteryBox();
+    }
+
+    function copyModalWish() {
+      const text = document.getElementById('modal-wish-text').textContent;
+      navigator.clipboard.writeText(text).then(() => {
+        alert("Đã sao chép lời chúc thành công! Bạn có thể gửi cho bạn bè ngay nhé 💖");
+      }).catch(() => {
+        alert("Lời chúc: " + text);
+      });
+    }
+
+    /* Sophia Rose Modal Handlers */
+    function openSophiaModal(event) {
+      sound.playPop();
+      sound.playChime();
+
+      if (event && event.clientX) {
+        for (let i = 0; i < 16; i++) {
+          createFloatingSymbol(event.clientX, event.clientY, '🌹');
+        }
+      }
+
+      document.getElementById('sophia-modal').classList.add('active');
+    }
+
+    function closeSophiaModal() {
+      sound.playSparkle();
+      document.getElementById('sophia-modal').classList.remove('active');
+    }
+
+    function burstSophiaRosePetals(event) {
+      sound.playSparkle();
+      const x = event && event.clientX ? event.clientX : window.innerWidth / 2;
+      const y = event && event.clientY ? event.clientY : window.innerHeight / 2;
+
+      for (let i = 0; i < 30; i++) {
+        createFloatingSymbol(x, y, Math.random() > 0.4 ? '🌹' : '🌸');
+      }
+    }
+
+    /* ==========================================================================
+       7. SECTION 6: CÂY HOA ĐIỀU ƯỚC 🌟
+       ========================================================================== */
+    let isTreeWishBusy = false;
+
+    function triggerWishTree() {
+      if (isTreeWishBusy) return;
+      isTreeWishBusy = true;
+
+      sound.playChime();
+      sound.playSparkle();
+
+      // Reset
+      document.querySelectorAll('.tree-line-text').forEach(el => el.classList.remove('visible'));
+      document.getElementById('tw-final').classList.remove('visible');
+      document.getElementById('tree-heart').classList.remove('active');
+
+      // 1. Light up tree blossoms
+      const blossoms = document.querySelectorAll('.tree-blossom');
+      blossoms.forEach((b, i) => {
+        setTimeout(() => {
+          b.classList.add('active');
+          sound.playTone(400 + i * 80, 'sine', 0.5, 0.08);
+        }, i * 140);
+      });
+
+      // 2. Converge into glowing beating heart
+      setTimeout(() => {
+        document.getElementById('tree-heart').classList.add('active');
+        sound.playSparkle();
+      }, 1200);
+
+      // 3. Sequential wish lines
+      const wishIds = ['tw-1', 'tw-2', 'tw-3', 'tw-4', 'tw-5', 'tw-final'];
+      wishIds.forEach((id, idx) => {
+        setTimeout(() => {
+          const el = document.getElementById(id);
+          if (el) el.classList.add('visible');
+          sound.playTone(520 + idx * 70, 'triangle', 0.8, 0.09);
+        }, 1800 + idx * 900);
+      });
+
+      setTimeout(() => {
+        isTreeWishBusy = false;
+      }, 1800 + wishIds.length * 900 + 400);
+    }
+
+    /* ==========================================================================
+       8. SECTION 8: LÁ THƯ CHÚC MỪNG 20/10 💌 (TYPEWRITER EFFECT)
+       ========================================================================== */
+    const fullLetterContent = `Nhân ngày 20/10, chúc bạn luôn xinh đẹp, vui vẻ và hạnh phúc theo cách mà bạn mong muốn.
+
+Mong rằng bạn sẽ luôn giữ được sự tự tin, lòng nhiệt huyết và những ước mơ của riêng mình. Dù cuộc sống đôi khi có bận rộn, áp lực hay không diễn ra như kế hoạch, hy vọng bạn vẫn đủ mạnh mẽ để bước tiếp và đủ dịu dàng để yêu thương bản thân.
+
+Chúc bạn gặp được những người chân thành, có những người bạn luôn sẵn sàng sẻ chia, có công việc thuận lợi và có thật nhiều cơ hội để trải nghiệm những điều mới mẻ.
+
+Mong những nỗ lực mà bạn đang âm thầm thực hiện sẽ mang đến những kết quả xứng đáng. Mong bạn có thể tự hào về bản thân, vui vẻ với những điều nhỏ bé và không ngừng trưởng thành theo cách của riêng mình.
+
+Đặc biệt, chúc bạn luôn nhớ rằng giá trị của bản thân không nằm ở việc phải trở thành ai khác, mà ở việc bạn được sống chân thật, tự do và hạnh phúc.
+
+Chúc bạn có một ngày 20/10 thật nhiều niềm vui, nhận được nhiều lời chúc đáng yêu và luôn được mọi người trân trọng.
+
+Happy Women's Day! 🌷💖
+Hãy luôn rạng rỡ, vì thế giới này sẽ đẹp hơn khi bạn hạnh phúc!`;
+
+    let letterCharIndex = 0;
+    let letterTypingTimer = null;
+    let isLetterFinished = false;
+
+    function startTypewriterLetter() {
+      const container = document.getElementById('letter-body-text');
+      if (!container || isLetterFinished) return;
+
+      container.innerHTML = '';
+      letterCharIndex = 0;
+
+      function typeNextChar() {
+        if (letterCharIndex < fullLetterContent.length) {
+          container.textContent = fullLetterContent.substring(0, letterCharIndex + 1);
+          letterCharIndex++;
+          letterTypingTimer = setTimeout(typeNextChar, 18);
+        } else {
+          isLetterFinished = true;
+          document.getElementById('btn-read-all-letter').style.display = 'none';
+        }
+      }
+
+      typeNextChar();
+    }
+
+    function revealEntireLetter() {
+      if (letterTypingTimer) clearTimeout(letterTypingTimer);
+      const container = document.getElementById('letter-body-text');
+      if (container) {
+        container.textContent = fullLetterContent;
+      }
+      isLetterFinished = true;
+      document.getElementById('btn-read-all-letter').style.display = 'none';
+      sound.playSparkle();
+    }
+
+    /* ==========================================================================
+       9. SECTION 9: FINALE — BỮA TIỆC ÁNH SÁNG 20/10
+       ========================================================================== */
+    function triggerLightParty() {
+      sound.playChime();
+      sound.startBGM();
+
+      // Shift theme to party night mode
+      document.body.classList.add('party-mode');
+
+      // Start fireworks canvas
+      fireworksEngine.start();
+
+      // Reveal finale party banner
+      const banner = document.getElementById('party-banner');
+      banner.classList.add('active');
+      document.getElementById('btn-start-party').style.display = 'none';
+
+      // Launch constellation of fireworks
+      for (let i = 0; i < 7; i++) {
+        setTimeout(() => {
+          fireworksEngine.launch();
+        }, i * 350);
+      }
+
+      // Confetti burst
+      spawnConfettiBurst();
+
+      // Scroll smoothly to finale card
+      banner.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+
+    function burstMoreFireworks() {
+      sound.playPop();
+      for (let i = 0; i < 5; i++) {
+        setTimeout(() => fireworksEngine.launch(), i * 200);
+      }
+      spawnConfettiBurst();
+    }
+
+    function restartJourney() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function toggleParticleEffects() {
+      ambientParticles.isRunning = !ambientParticles.isRunning;
+      const btn = document.getElementById('btn-effects-toggle');
+      if (ambientParticles.isRunning) {
+        if (btn) btn.classList.add('active');
+        sound.playSparkle();
+      } else {
+        if (btn) btn.classList.remove('active');
+      }
+    }
+
+    /* ==========================================================================
+       10. GLOBAL CONTROLS & RIPPLE
+       ========================================================================== */
+    // Sound Dock Toggle
+    document.getElementById('btn-sound-toggle').addEventListener('click', () => {
+      sound.toggle();
+    });
+
+    // Effects Dock Toggle
+    document.getElementById('btn-effects-toggle').addEventListener('click', () => {
+      toggleParticleEffects();
+    });
+
+    // Scroll to Top Dock
+    document.getElementById('btn-scroll-top').addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      sound.playSparkle();
+    });
+
+    // Click Ripple Stardust on any screen click
+    window.addEventListener('click', (e) => {
+      // Don't duplicate inside modal close
+      const sparkle = document.createElement('div');
+      sparkle.className = 'click-sparkle';
+      sparkle.style.left = `${e.clientX}px`;
+      sparkle.style.top = `${e.clientY}px`;
+      document.body.appendChild(sparkle);
+      setTimeout(() => sparkle.remove(), 800);
+    });
+
+    // Intersection Observer for graceful scroll animations
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll('.wish-card-container, .polaroid-card').forEach(el => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(25px)';
+      el.style.transition = 'opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1)';
+      observer.observe(el);
+    });
+  </script>
+</body>
+</html>
+
